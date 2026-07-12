@@ -8,9 +8,9 @@ const pluto = require('./lib/pluto');
 
 const MANIFEST = {
   id: 'org.korndog.sports',
-  version: '0.1.0',
+  version: '0.2.0',
   name: 'KornDog Sports',
-  description: 'Free live sports channels from Pluto TV, Samsung TV+, Xumo and Plex, merged into one KornDog catalog.',
+  description: 'Free live sports and outdoor channels from multiple public providers, merged into one KornDog catalog.',
   logo: 'https://korndogrecords.com/favicon.png', // swap for real hosted logo when ready
   resources: ['catalog', 'stream'],
   types: ['tv'],
@@ -21,7 +21,7 @@ const MANIFEST = {
       name: 'KornDog Sports'
     }
   ],
-  idPrefixes: ['pluto-'] // will grow as more sources are added (samsung-, xumo-, plex-)
+  idPrefixes: ['pluto-', 'iptvorg-'],
 };
 
 const builder = new addonBuilder(MANIFEST);
