@@ -1,8 +1,5 @@
-const {
-  getMergedSportsChannels
-} = require('../../lib/sources');
-
-const PAGE_SIZE = 50;
+const { getMergedSportsChannels } = require('../../lib/sources');
+const { CATALOGS, FEATURED_NAMES } = require('../../lib/catalogs');
 
 function decode(value) {
   try {
@@ -14,45 +11,30 @@ function decode(value) {
 
 function parseRequest(event) {
   const query = event.queryStringParameters || {};
-
   let type = query.type || '';
   let id = query.id || '';
-  let genre = query.genre || '';
-  let skip = Number(query.skip || 0);
-  let extra = query.extra || '';
 
   const path = event.path || event.rawPath || '';
-  const match = path.match(
-    /\/catalog\/([^/]+)\/([^/]+)(?:\/(.+))?\.json$/
-  );
+  const match = path.match(/\/catalog\/([^/]+)\/([^/]+)\.json$/);
 
   if (match) {
     type = type || decode(match[1]);
     id = id || decode(match[2]);
-    extra = extra || decode(match[3] || '');
   }
 
-  if (extra) {
-    const extraParams = new URLSearchParams(extra);
+  return { type, id };
+}
 
-    genre = genre || extraParams.get('genre') || '';
+function isFeatured(channel) {
+  const name = String(channel.name || '').toLowerCase();
 
-    const extraSkip = Number(extraParams.get('skip') || 0);
-    if (Number.isFinite(extraSkip)) skip = extraSkip;
-  }
-
-  if (!Number.isFinite(skip) || skip < 0) skip = 0;
-
-  return {
-    type,
-    id,
-    genre,
-    skip
-  };
+  return FEATURED_NAMES.some(target =>
+    name.includes(target.toLowerCase())
+  );
 }
 
 exports.handler = async event => {
-  const { type, id, genre, skip } = parseRequest(event);
+  const { type, id } = parseRequest(event);
 
   const headers = {
     'Content-Type': 'application/json',
@@ -60,7 +42,17 @@ exports.handler = async event => {
     'Cache-Control': 'public, max-age=300'
   };
 
-  if (type !== 'tv' || id !== 'korndog-sports') {
+  if (type !== 'tv') {
+    return {
+      statusCode: 200,
+      headers,
+      body: JSON.stringify({ metas: [] })
+    };
+  }
+
+  const catalog = CATALOGS.find(item => item.id === id);
+
+  if (!catalog) {
     return {
       statusCode: 200,
       headers,
@@ -69,36 +61,37 @@ exports.handler = async event => {
   }
 
   try {
-    let channels = await getMergedSportsChannels();
+    const allChannels = await getMergedSportsChannels();
 
-    if (genre && genre !== 'Featured') {
-      channels = channels.filter(
-        channel => channel.category === genre
-      );
+    let channels;
+
+    if (catalog.category === 'Featured') {
+      channels = allChannels
+        .filter(isFeatured)
+        .sort((a, b) => (b.score || 0) - (a.score || 0));
+    } else {
+      channels = allChannels
+        .filter(channel => channel.category === catalog.category)
+        .sort((a, b) => (b.score || 0) - (a.score || 0));
     }
 
-    const page = channels.slice(skip, skip + PAGE_SIZE);
-
-    const metas = page.map(channel => ({
+    const metas = channels.map(channel => ({
       id: channel.id,
       type: 'tv',
       name: channel.name,
       poster: channel.logo || undefined,
       posterShape: 'square',
       description:
-        `${channel.description || 'Live sports channel'}\n\n` +
-        `Verified: ${channel.checkedAt || 'recently'} · ` +
+        `${channel.description || 'Verified live channel'}\n\n` +
         `${channel.probe?.maxHeight || '?'}p · ` +
-        `Score ${channel.score || 0}`,
-      genres: channel.category
-        ? [channel.category]
-        : ['Sports']
+        `Score ${channel.score || 0} · ` +
+        `Verified ${channel.checkedAt || 'recently'}`,
+      genres: [catalog.name]
     }));
 
     console.log('[catalog]', {
-      total: channels.length,
-      genre: genre || 'Featured',
-      skip,
+      id,
+      category: catalog.category,
       returned: metas.length
     });
 
