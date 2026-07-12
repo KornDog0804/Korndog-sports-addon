@@ -28,3 +28,8 @@
   [headers.values]
     Access-Control-Allow-Origin = "*"
     Cache-Control = "public, max-age=300"
+
+[[redirects]]
+  from = "/catalog/:type/:id/:extra.json"
+  to = "/.netlify/functions/catalog?type=:type&id=:id&extra=:extra"
+  status = 200
