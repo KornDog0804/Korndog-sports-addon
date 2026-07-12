@@ -6,7 +6,7 @@ const MANIFEST = {
   name: 'KornDog Sports',
   description: 'Free live sports and outdoor channels from multiple public providers, merged into one KornDog catalog.',
   logo: 'https://korndogrecords.com/favicon.png',
-  resources: ['catalog', 'stream'],
+  resources: ['catalog', 'meta', 'stream'],
   types: ['tv'],
   catalogs: [
     {
