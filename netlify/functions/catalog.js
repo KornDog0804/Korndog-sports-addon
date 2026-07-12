@@ -64,6 +64,9 @@ exports.handler = async (event) => {
       channels = channels.filter(channel => channel.category === genre);
     }
 
+    const skip = Number(event.queryStringParameters?.skip || 0);
+    channels = channels.slice(skip, skip + 50);
+
     const metas = channels.map(channel => ({
       id: channel.id,
       type: 'tv',
