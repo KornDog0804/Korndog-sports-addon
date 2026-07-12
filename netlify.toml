@@ -1,0 +1,30 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/manifest.json"
+  to = "/.netlify/functions/manifest"
+  status = 200
+
+[[redirects]]
+  from = "/catalog/:type/:id.json"
+  to = "/.netlify/functions/catalog?type=:type&id=:id"
+  status = 200
+
+[[redirects]]
+  from = "/stream/:type/:id.json"
+  to = "/.netlify/functions/stream?type=:type&id=:id"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/manifest.json"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "public, max-age=300"
