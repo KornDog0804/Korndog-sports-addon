@@ -4,10 +4,11 @@
   "description": "KornDog Sports - Stremio addon merging free live sports channels",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "verify": "node scripts/verify-channels.js"
   },
   "dependencies": {
-    "stremio-addon-sdk": "^1.6.10",
-    "node-fetch": "^2.7.0"
+    "node-fetch": "^2.7.0",
+    "stremio-addon-sdk": "^1.6.10"
   }
 }

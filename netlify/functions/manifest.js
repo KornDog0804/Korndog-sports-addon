@@ -1,10 +1,9 @@
-// netlify/functions/manifest.js
-
 const MANIFEST = {
   id: 'org.korndog.sports',
-  version: '0.2.0',
+  version: '0.3.0',
   name: 'KornDog Sports',
-  description: 'Free live sports and outdoor channels from multiple public providers, merged into one KornDog catalog.',
+  description:
+    'Verified working sports, combat, motorsports, hunting, fishing and outdoor channels.',
   logo: 'https://korndogrecords.com/favicon.png',
   resources: ['catalog', 'meta', 'stream'],
   types: ['tv'],
@@ -12,7 +11,7 @@ const MANIFEST = {
     {
       type: 'tv',
       id: 'korndog-sports',
-      name: 'KornDog Sports',
+      name: 'KornDog Sports Verified',
       extra: [
         {
           name: 'genre',
@@ -33,6 +32,10 @@ const MANIFEST = {
             'International'
           ],
           isRequired: false
+        },
+        {
+          name: 'skip',
+          isRequired: false
         }
       ]
     }
@@ -44,7 +47,8 @@ exports.handler = async () => ({
   statusCode: 200,
   headers: {
     'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*'
+    'Access-Control-Allow-Origin': '*',
+    'Cache-Control': 'public, max-age=300'
   },
   body: JSON.stringify(MANIFEST)
 });

@@ -1,6 +1,8 @@
-// netlify/functions/catalog.js
+const {
+  getMergedSportsChannels
+} = require('../../lib/sources');
 
-const { getMergedSportsChannels } = require('../../lib/sources');
+const PAGE_SIZE = 50;
 
 function decode(value) {
   try {
@@ -12,13 +14,17 @@ function decode(value) {
 
 function parseRequest(event) {
   const query = event.queryStringParameters || {};
+
   let type = query.type || '';
   let id = query.id || '';
   let genre = query.genre || '';
+  let skip = Number(query.skip || 0);
   let extra = query.extra || '';
 
   const path = event.path || event.rawPath || '';
-  const match = path.match(/\/catalog\/([^/]+)\/([^/]+)(?:\/(.+))?\.json$/);
+  const match = path.match(
+    /\/catalog\/([^/]+)\/([^/]+)(?:\/(.+))?\.json$/
+  );
 
   if (match) {
     type = type || decode(match[1]);
@@ -26,16 +32,27 @@ function parseRequest(event) {
     extra = extra || decode(match[3] || '');
   }
 
-  if (!genre && extra) {
+  if (extra) {
     const extraParams = new URLSearchParams(extra);
-    genre = extraParams.get('genre') || '';
+
+    genre = genre || extraParams.get('genre') || '';
+
+    const extraSkip = Number(extraParams.get('skip') || 0);
+    if (Number.isFinite(extraSkip)) skip = extraSkip;
   }
 
-  return { type, id, genre };
+  if (!Number.isFinite(skip) || skip < 0) skip = 0;
+
+  return {
+    type,
+    id,
+    genre,
+    skip
+  };
 }
 
-exports.handler = async (event) => {
-  const { type, id, genre } = parseRequest(event);
+exports.handler = async event => {
+  const { type, id, genre, skip } = parseRequest(event);
 
   const headers = {
     'Content-Type': 'application/json',
@@ -44,12 +61,6 @@ exports.handler = async (event) => {
   };
 
   if (type !== 'tv' || id !== 'korndog-sports') {
-    console.log('[catalog] rejected request', {
-      path: event.path,
-      query: event.queryStringParameters,
-      parsed: { type, id, genre }
-    });
-
     return {
       statusCode: 200,
       headers,
@@ -61,27 +72,34 @@ exports.handler = async (event) => {
     let channels = await getMergedSportsChannels();
 
     if (genre && genre !== 'Featured') {
-      channels = channels.filter(channel => channel.category === genre);
+      channels = channels.filter(
+        channel => channel.category === genre
+      );
     }
 
-    const skip = Number(event.queryStringParameters?.skip || 0);
-    channels = channels.slice(skip, skip + 50);
+    const page = channels.slice(skip, skip + PAGE_SIZE);
 
-    const metas = channels.map(channel => ({
+    const metas = page.map(channel => ({
       id: channel.id,
       type: 'tv',
       name: channel.name,
       poster: channel.logo || undefined,
       posterShape: 'square',
-      description: channel.description || '',
-      genres: channel.category ? [channel.category] : []
+      description:
+        `${channel.description || 'Live sports channel'}\n\n` +
+        `Verified: ${channel.checkedAt || 'recently'} · ` +
+        `${channel.probe?.maxHeight || '?'}p · ` +
+        `Score ${channel.score || 0}`,
+      genres: channel.category
+        ? [channel.category]
+        : ['Sports']
     }));
 
-    console.log('[catalog] response', {
-      path: event.path,
-      query: event.queryStringParameters,
-      parsed: { type, id, genre },
-      count: metas.length
+    console.log('[catalog]', {
+      total: channels.length,
+      genre: genre || 'Featured',
+      skip,
+      returned: metas.length
     });
 
     return {

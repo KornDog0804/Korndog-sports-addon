@@ -1,0 +1,61 @@
+{
+  "proven": [
+    "ACC Network",
+    "ACCDN",
+    "America's Sports"
+  ],
+  "sportsTargets": [
+    "CBS Sports HQ",
+    "CBS Sports Golazo",
+    "NFL Channel",
+    "MLB Channel",
+    "NBA Channel",
+    "PGA Tour",
+    "GolfPass",
+    "Tennis Channel",
+    "Women's Sports Network",
+    "World Poker Tour",
+    "PokerGO"
+  ],
+  "combatTargets": [
+    "UFC",
+    "TNA Wrestling",
+    "Professional Wrestling",
+    "Fight Network",
+    "DAZN Ringside",
+    "PFL",
+    "ONE Championship",
+    "Bellator",
+    "Top Rank"
+  ],
+  "motorsportsTargets": [
+    "Monster Jam",
+    "PBR RidePass",
+    "F1",
+    "Formula 1",
+    "POWERNATION",
+    "MotoAmerica",
+    "MAVTV",
+    "Red Bull TV"
+  ],
+  "huntingTargets": [
+    "Waypoint TV",
+    "Pursuit Channel",
+    "Hunt Channel",
+    "HuntStream",
+    "Outdoor America",
+    "Sportsman Channel",
+    "Mossy Oak",
+    "Realtree",
+    "Ducks Unlimited",
+    "Wild TV"
+  ],
+  "fishingTargets": [
+    "Fishing TV",
+    "World Fishing Network",
+    "Major League Fishing",
+    "Bassmaster",
+    "Waypoint TV",
+    "Outdoor America"
+  ]
+}
