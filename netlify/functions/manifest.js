@@ -2,7 +2,7 @@ const { CATALOGS } = require('../../lib/catalogs');
 
 const MANIFEST = {
   id: 'org.korndog.sports',
-  version: '0.5.0',
+  version: '0.5.2',
   name: 'KornDog Sports',
   description:
     'Verified live sports, combat, motorsports, hunting, fishing and outdoor channels.',
