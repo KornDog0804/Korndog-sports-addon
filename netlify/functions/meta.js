@@ -60,16 +60,25 @@ exports.handler = async (event) => {
       type: 'tv',
       name: channel.name,
       poster: channel.logo || undefined,
+      posterShape: 'square',
       background: channel.logo || undefined,
-      description: channel.description || `Live sports channel from ${channel.source}`,
-      genres: channel.category ? [channel.category] : ['Sports'],
+      description:
+        channel.description ||
+        `Live sports channel from ${channel.source}`,
+      genres: channel.category
+        ? [channel.category]
+        : ['Sports'],
       releaseInfo: 'Live Channel',
       runtime: 'Live',
+      behaviorHints: {
+        defaultVideoId: channel.id
+      },
       videos: [
         {
           id: channel.id,
           title: 'Watch Live',
-          released: new Date().toISOString()
+          released: new Date().toISOString(),
+          available: true
         }
       ]
     };
