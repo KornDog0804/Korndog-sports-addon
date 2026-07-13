@@ -14,7 +14,7 @@ const MANIFEST = {
     id: catalog.id,
     name: catalog.name
   })),
-  idPrefixes: ['pluto-', 'iptvorg-']
+  idPrefixes: ['pluto-', 'iptvorg-', 'plex-']
 };
 
 exports.handler = async () => ({
