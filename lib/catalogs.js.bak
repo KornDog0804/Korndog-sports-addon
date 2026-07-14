@@ -17,6 +17,7 @@ const CATALOGS = [
   { id: 'korndog-horse-racing', name: 'Horse Racing', category: 'Horse Racing' },
   { id: 'korndog-poker', name: 'Poker', category: 'Poker' },
   { id: 'korndog-classic', name: 'Classic Sports', category: 'Classic Sports' },
+  { id: 'korndog-international', name: 'International Sports', category: 'International' }
 ];
 
 const FEATURED_NAMES = [

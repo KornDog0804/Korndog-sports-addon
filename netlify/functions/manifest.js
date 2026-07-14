@@ -7,7 +7,7 @@ const MANIFEST = {
   description:
     'Verified live sports, combat, motorsports, hunting, fishing and outdoor channels.',
   logo: 'https://korndogrecords.com/favicon.png',
-  resources: ['catalog', 'meta', 'stream'],
+  resources: ['catalog', 'stream'],
   types: ['tv'],
   catalogs: CATALOGS.map(catalog => ({
     type: 'tv',
