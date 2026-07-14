@@ -8,11 +8,11 @@ const pluto = require('./lib/pluto');
 
 const MANIFEST = {
   id: 'org.korndog.sports',
-  version: '0.5.2',
+  version: '0.5.3',
   name: 'KornDog Sports',
   description: 'Free live sports and outdoor channels from multiple public providers, merged into one KornDog catalog.',
   logo: 'https://korndogrecords.com/favicon.png', // swap for real hosted logo when ready
-  resources: ['catalog', 'stream'],
+  resources: ['catalog', 'meta', 'stream'],
   types: ['tv'],
   catalogs: [
     {
@@ -75,6 +75,49 @@ builder.defineCatalogHandler(async ({ type, id }) => {
   }));
 
   return { metas };
+});
+
+builder.defineMetaHandler(async ({ type, id }) => {
+  if (type !== 'tv' || !id) {
+    return { meta: null };
+  }
+
+  const channels = await getMergedSportsChannels();
+  const channel = channels.find(ch => ch.id === id);
+
+  if (!channel) {
+    return { meta: null };
+  }
+
+  return {
+    meta: {
+      id: channel.id,
+      type: 'tv',
+      name: channel.name,
+      poster: channel.logo || undefined,
+      posterShape: 'square',
+      background: channel.logo || undefined,
+      description:
+        channel.description ||
+        `Live sports channel from ${channel.source || 'KornDog Sports'}`,
+      genres: channel.category
+        ? [channel.category]
+        : ['Sports'],
+      releaseInfo: 'Live Channel',
+      runtime: 'Live',
+      behaviorHints: {
+        defaultVideoId: channel.id
+      },
+      videos: [
+        {
+          id: channel.id,
+          title: 'Watch Live',
+          released: new Date().toISOString(),
+          available: true
+        }
+      ]
+    }
+  };
 });
 
 builder.defineStreamHandler(async ({ type, id }) => {

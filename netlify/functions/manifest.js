@@ -2,12 +2,12 @@ const { CATALOGS } = require('../../lib/catalogs');
 
 const MANIFEST = {
   id: 'org.korndog.sports',
-  version: '0.5.2',
+  version: '0.5.3',
   name: 'KornDog Sports',
   description:
     'Verified live sports, combat, motorsports, hunting, fishing and outdoor channels.',
   logo: 'https://korndogrecords.com/favicon.png',
-  resources: ['catalog', 'stream'],
+  resources: ['catalog', 'meta', 'stream'],
   types: ['tv'],
   catalogs: CATALOGS.map(catalog => ({
     type: 'tv',
