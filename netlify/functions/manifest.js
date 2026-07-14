@@ -2,19 +2,19 @@ const { CATALOGS } = require('../../lib/catalogs');
 
 const MANIFEST = {
   id: 'org.korndog.sports',
-  version: '0.4.0',
+  version: '0.5.2',
   name: 'KornDog Sports',
   description:
     'Verified live sports, combat, motorsports, hunting, fishing and outdoor channels.',
   logo: 'https://korndogrecords.com/favicon.png',
-  resources: ['catalog', 'meta', 'stream'],
+  resources: ['catalog', 'stream'],
   types: ['tv'],
   catalogs: CATALOGS.map(catalog => ({
     type: 'tv',
     id: catalog.id,
     name: catalog.name
   })),
-  idPrefixes: ['pluto-', 'iptvorg-']
+  idPrefixes: ['pluto-', 'iptvorg-', 'plex-']
 };
 
 exports.handler = async () => ({

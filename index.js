@@ -8,11 +8,11 @@ const pluto = require('./lib/pluto');
 
 const MANIFEST = {
   id: 'org.korndog.sports',
-  version: '0.3.0',
+  version: '0.5.2',
   name: 'KornDog Sports',
   description: 'Free live sports and outdoor channels from multiple public providers, merged into one KornDog catalog.',
   logo: 'https://korndogrecords.com/favicon.png', // swap for real hosted logo when ready
-  resources: ['catalog', 'meta', 'stream'],
+  resources: ['catalog', 'stream'],
   types: ['tv'],
   catalogs: [
     {
