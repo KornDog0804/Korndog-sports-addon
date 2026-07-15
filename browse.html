@@ -83,7 +83,8 @@
   #player-view { display: none; }
   #player-view.show { display: block; }
   #video-wrap { position: relative; width: 100%; background: #000; }
-  #video { width: 100%; display: block; max-height: 70vh; }
+  #video { width: 100%; height: auto; max-height: 100vh; display: block; object-fit: contain; }
+  #video:fullscreen { max-height: 100vh; width: 100vw; object-fit: contain; }
   #player-info { padding: 14px 16px; }
   #player-info h2 { font-size: 17px; margin-bottom: 4px; }
   #player-info p { font-size: 13px; color: var(--muted); }
@@ -202,7 +203,18 @@
       currentHls.loadSource(stream.url);
       currentHls.attachMedia(video);
     }
-    video.play().catch(() => {});
+
+    await video.play().catch(() => {});
+
+    // Request fullscreen on the video element itself (not the whole page) -
+    // on mobile this is what triggers the browser/OS to auto-rotate into
+    // landscape and give a proper edge-to-edge fullscreen video, instead of
+    // the boxed-in portrait view.
+    if (video.requestFullscreen) {
+      video.requestFullscreen().catch(() => {});
+    } else if (video.webkitEnterFullscreen) {
+      video.webkitEnterFullscreen(); // iOS Safari's native video fullscreen
+    }
   }
 
   backBtn.onclick = () => {
