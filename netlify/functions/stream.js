@@ -67,23 +67,11 @@ exports.handler = async (event) => {
         return { statusCode: 200, headers, body: JSON.stringify({ streams: [] }) };
       }
 
-      // Single-track sessions (most Unplugged/Tiny Desk items) just link
-      // straight to the video, same as before. Multi-track "queue" sessions
-      // (Stitched Streams acoustic sets, tribute sets) now link to the
-      // watch.html sequencer page instead, so they play as one continuous
-      // stitched session using YouTube's own embed player - auto-advancing
-      // through every track instead of stopping after track one.
-      if (item.tracks.length === 1) {
-        const streams = [
-          {
-            name: 'KornDog Concert Corner',
-            title: `${item.tracks[0].title} — ${item.name}`,
-            externalUrl: item.tracks[0].externalUrl
-          }
-        ];
-        return { statusCode: 200, headers, body: JSON.stringify({ streams }) };
-      }
-
+      // Everything routes through watch.html now - even single-track
+      // sessions - so playback always stays inside the KornDog embedded
+      // player instead of handing off to the full YouTube app/site. This
+      // keeps "back" behavior consistent and avoids the multi-tap jump
+      // back into Concert Corner that happens when YouTube itself opens.
       const videoIds = item.tracks
         .map(t => extractYoutubeId(t.externalUrl))
         .filter(Boolean);
@@ -97,7 +85,9 @@ exports.handler = async (event) => {
       const streams = [
         {
           name: 'KornDog Concert Corner',
-          title: `${item.name} (${item.tracks.length} songs, stitched)`,
+          title: item.tracks.length > 1
+            ? `${item.name} (${item.tracks.length} songs, stitched)`
+            : item.name,
           externalUrl: watchUrl
         }
       ];
