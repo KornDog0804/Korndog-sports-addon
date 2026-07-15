@@ -1,4 +1,5 @@
 const { getMergedSportsChannels } = require('../../lib/sources');
+const { getConcertItems } = require('../../lib/providers/concerts');
 const { CATALOGS, FEATURED_NAMES } = require('../../lib/catalogs');
 
 function decode(value) {
@@ -16,7 +17,6 @@ function parseRequest(event) {
 
   const path = event.path || event.rawPath || '';
   const match = path.match(/\/catalog\/([^/]+)\/([^/]+)\.json$/);
-
   if (match) {
     type = type || decode(match[1]);
     id = id || decode(match[2]);
@@ -27,7 +27,6 @@ function parseRequest(event) {
 
 function isFeatured(channel) {
   const name = String(channel.name || '').toLowerCase();
-
   return FEATURED_NAMES.some(target =>
     name.includes(target.toLowerCase())
   );
@@ -51,7 +50,6 @@ exports.handler = async event => {
   }
 
   const catalog = CATALOGS.find(item => item.id === id);
-
   if (!catalog) {
     return {
       statusCode: 200,
@@ -61,8 +59,31 @@ exports.handler = async event => {
   }
 
   try {
-    const allChannels = await getMergedSportsChannels();
+    // Concert Corner is a completely separate data source/shape (YouTube
+    // links, not verified live channels) - handled here and returned early,
+    // so it never touches the sports channel filtering/scoring below.
+    if (catalog.category === 'Concerts') {
+      const items = await getConcertItems();
 
+      const metas = items.map(item => ({
+        id: item.id,
+        type: 'tv',
+        name: item.name,
+        poster: item.logo || undefined,
+        posterShape: 'poster',
+        description: item.description || 'Concert Corner session'
+      }));
+
+      console.log('[catalog]', { id, category: catalog.category, returned: metas.length });
+
+      return {
+        statusCode: 200,
+        headers,
+        body: JSON.stringify({ metas })
+      };
+    }
+
+    const allChannels = await getMergedSportsChannels();
     let channels;
 
     if (catalog.category === 'Featured') {
@@ -102,7 +123,6 @@ exports.handler = async event => {
     };
   } catch (error) {
     console.error('[catalog] failed:', error);
-
     return {
       statusCode: 200,
       headers,
