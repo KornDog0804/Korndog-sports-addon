@@ -43,6 +43,11 @@
   // iframe). So we start muted (which autoplay IS allowed to do), and show
   // our own real on-page button - outside the iframe, fully focusable by a
   // TV remote - that unmutes and confirms playback with one press.
+  //
+  // That same tap also requests fullscreen, which is what hides Chrome's
+  // address bar (top) and nav bar (bottom-left) on Android/Google TV -
+  // both are controlled by the same Fullscreen API call, browsers just
+  // require it to fire inside a real user gesture like this click.
   const params = new URLSearchParams(window.location.search);
   const ids = (params.get('ids') || '').split(',').filter(Boolean);
   const titles = (params.get('titles') || '').split(',').map(t => decodeURIComponent(t));
@@ -83,6 +88,15 @@
       player.unMute();
       player.playVideo();
       btn.classList.add('hidden');
+
+      // Request fullscreen on the same tap - hides both the top address bar
+      // and bottom nav bar together on TV Chrome builds that support it.
+      const el = document.documentElement;
+      if (el.requestFullscreen) {
+        el.requestFullscreen().catch(() => {}); // ignore if TV browser blocks it
+      } else if (el.webkitRequestFullscreen) {
+        el.webkitRequestFullscreen();
+      }
     });
   }
 
