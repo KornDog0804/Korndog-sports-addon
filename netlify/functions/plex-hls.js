@@ -98,9 +98,27 @@ function rewriteVariant(text, baseUrl) {
 exports.handler = async event => {
   try {
     const query = event.queryStringParameters || {};
-    const channelId = query.id;
-    const variant =
+    const path = event.path || event.rawPath || '';
+
+    let channelId = query.id || '';
+    let variant =
       query.variant === undefined ? null : Number(query.variant);
+
+    const masterMatch =
+      path.match(/\/plex-hls\/([^/]+)\/master\.m3u8$/);
+
+    const variantMatch =
+      path.match(/\/plex-hls\/([^/]+)\/variant\/(\d+)\.m3u8$/);
+
+    if (masterMatch) {
+      channelId = decodeURIComponent(masterMatch[1]);
+      variant = null;
+    }
+
+    if (variantMatch) {
+      channelId = decodeURIComponent(variantMatch[1]);
+      variant = Number(variantMatch[2]);
+    }
 
     if (!channelId) {
       return response(400, 'Missing channel id');
