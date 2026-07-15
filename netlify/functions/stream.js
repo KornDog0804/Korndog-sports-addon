@@ -77,7 +77,7 @@ exports.handler = async (event) => {
             title: `${channel.name} (${channel.source})`,
             url:
           channel.source === 'plex'
-            ? `${process.env.URL}/.netlify/functions/plex-hls?id=${encodeURIComponent(channel.id)}`
+            ? `${process.env.URL}/plex-hls/${encodeURIComponent(channel.id)}/master.m3u8`
             : channel.streamUrl
           }
         ]

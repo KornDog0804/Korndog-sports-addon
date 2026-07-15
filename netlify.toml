@@ -38,3 +38,13 @@
   from = "/meta/:type/:id.json"
   to = "/.netlify/functions/meta?type=:type&id=:id"
   status = 200
+
+[[redirects]]
+  from = "/plex-hls/:id/master.m3u8"
+  to = "/.netlify/functions/plex-hls?id=:id"
+  status = 200
+
+[[redirects]]
+  from = "/plex-hls/:id/variant/:variant.m3u8"
+  to = "/.netlify/functions/plex-hls?id=:id&variant=:variant"
+  status = 200

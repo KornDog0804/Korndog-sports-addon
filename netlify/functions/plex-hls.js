@@ -59,9 +59,8 @@ function rewriteMaster(text, channelId, baseUrl, origin) {
 
     if (expectingVariant && trimmed && !trimmed.startsWith('#')) {
       const proxied =
-        `${origin}/.netlify/functions/plex-hls` +
-        `?id=${encodeURIComponent(channelId)}` +
-        `&variant=${variantIndex}`;
+        `${origin}/plex-hls/${encodeURIComponent(channelId)}` +
+        `/variant/${variantIndex}.m3u8`;
 
       variantIndex += 1;
       expectingVariant = false;
