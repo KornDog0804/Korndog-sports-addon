@@ -13,8 +13,8 @@
   status = 200
 
 [[redirects]]
-  from = "/stream/:type/:id.json"
-  to = "/.netlify/functions/stream?type=:type&id=:id"
+  from = "/stream/:type/*"
+  to = "/.netlify/functions/stream?type=:type&id=:splat"
   status = 200
 
 [[headers]]

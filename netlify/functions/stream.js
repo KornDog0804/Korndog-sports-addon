@@ -23,7 +23,7 @@ function parseRequest(event) {
     id = id || decode(match[2]);
   }
 
-  return { type, id };
+  return { type, id: id.replace(/\.json$/, '') };
 }
 
 exports.handler = async (event) => {
