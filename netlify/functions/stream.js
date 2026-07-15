@@ -1,6 +1,7 @@
 // netlify/functions/stream.js
 
 const { getMergedSportsChannels } = require('../../lib/sources');
+const { getConcertItems } = require('../../lib/providers/concerts');
 
 function decode(value) {
   try {
@@ -17,7 +18,6 @@ function parseRequest(event) {
 
   const path = event.path || event.rawPath || '';
   const match = path.match(/\/stream\/([^/]+)\/([^/]+)\.json$/);
-
   if (match) {
     type = type || decode(match[1]);
     id = id || decode(match[2]);
@@ -50,6 +50,31 @@ exports.handler = async (event) => {
   }
 
   try {
+    if (id.startsWith('concert-')) {
+      const items = await getConcertItems();
+      const item = items.find(it => it.id === id);
+
+      if (!item || !item.tracks || item.tracks.length === 0) {
+        return {
+          statusCode: 200,
+          headers,
+          body: JSON.stringify({ streams: [] })
+        };
+      }
+
+      const streams = item.tracks.map(track => ({
+        name: 'KornDog Concert Corner',
+        title: `${track.title} — ${item.name}`,
+        externalUrl: track.externalUrl
+      }));
+
+      return {
+        statusCode: 200,
+        headers,
+        body: JSON.stringify({ streams })
+      };
+    }
+
     const channels = await getMergedSportsChannels();
     const channel = channels.find(item => item.id === id);
 
@@ -76,16 +101,15 @@ exports.handler = async (event) => {
             name: 'KornDog Sports',
             title: `${channel.name} (${channel.source})`,
             url:
-          channel.source === 'plex'
-            ? `${process.env.URL}/plex-hls/${encodeURIComponent(channel.id)}/master.m3u8`
-            : channel.streamUrl
+              channel.source === 'plex'
+                ? `${process.env.URL}/plex-hls/${encodeURIComponent(channel.id)}/master.m3u8`
+                : channel.streamUrl
           }
         ]
       })
     };
   } catch (error) {
     console.error('[stream] failed:', error);
-
     return {
       statusCode: 200,
       headers,
