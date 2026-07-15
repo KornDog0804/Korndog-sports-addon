@@ -5,7 +5,7 @@ const MANIFEST = {
   version: '0.5.3',
   name: 'KornDog Sports',
   description:
-    'Verified live sports, combat, motorsports, hunting, fishing and outdoor channels.',
+    'Verified live sports, combat, motorsports, hunting, fishing and outdoor channels, plus Concert Corner unplugged sessions and live sets.',
   logo: 'https://korndogrecords.com/favicon.png',
   resources: ['catalog', 'meta', 'stream'],
   types: ['tv'],
@@ -14,7 +14,7 @@ const MANIFEST = {
     id: catalog.id,
     name: catalog.name
   })),
-  idPrefixes: ['pluto-', 'iptvorg-', 'plex-']
+  idPrefixes: ['pluto-', 'iptvorg-', 'plex-', 'concert-']
 };
 
 exports.handler = async () => ({
