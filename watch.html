@@ -13,6 +13,11 @@
     color: #c4ff42; font-family: -apple-system, sans-serif; font-size: 14px;
     background: rgba(10,5,18,.7); padding: 6px 12px; border-radius: 8px;
     pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+  }
+  #now-playing.faded {
+    opacity: 0;
   }
   #unmute-btn {
     position: fixed; top: 14px; right: 14px; z-index: 20;
@@ -45,9 +50,8 @@
   // TV remote - that unmutes and confirms playback with one press.
   //
   // That same tap also requests fullscreen, which is what hides Chrome's
-  // address bar (top) and nav bar (bottom-left) on Android/Google TV -
-  // both are controlled by the same Fullscreen API call, browsers just
-  // require it to fire inside a real user gesture like this click.
+  // address bar (top) on Android/Google TV - browsers require it to fire
+  // inside a real user gesture like this click.
   const params = new URLSearchParams(window.location.search);
   const ids = (params.get('ids') || '').split(',').filter(Boolean);
   const titles = (params.get('titles') || '').split(',').map(t => decodeURIComponent(t));
@@ -55,11 +59,29 @@
 
   let currentIndex = 0;
   let player;
+  let fadeTimer;
 
   function updateNowPlaying() {
     const title = titles[currentIndex] || `Track ${currentIndex + 1}`;
-    document.getElementById('now-playing').textContent =
-      `${sessionName} — ${title} (${currentIndex + 1}/${ids.length})`;
+    const overlay = document.getElementById('now-playing');
+
+    // For single-track sessions, the track title and session name are
+    // usually near-identical - showing both stacks into a redundant
+    // two-line mess. Only show the "(x/y)" counter when there's actually
+    // more than one track to distinguish between.
+    if (ids.length === 1) {
+      overlay.textContent = sessionName;
+    } else {
+      overlay.textContent = `${sessionName} — ${title} (${currentIndex + 1}/${ids.length})`;
+    }
+
+    // Show it fresh every time a track changes, then auto-fade after 8s
+    // so it doesn't sit on screen the whole session.
+    overlay.classList.remove('faded');
+    clearTimeout(fadeTimer);
+    fadeTimer = setTimeout(() => {
+      overlay.classList.add('faded');
+    }, 8000);
   }
 
   function onYouTubeIframeAPIReady() {
@@ -89,8 +111,8 @@
       player.playVideo();
       btn.classList.add('hidden');
 
-      // Request fullscreen on the same tap - hides both the top address bar
-      // and bottom nav bar together on TV Chrome builds that support it.
+      // Request fullscreen on the same tap - hides the top address bar on
+      // TV Chrome builds that support it.
       const el = document.documentElement;
       if (el.requestFullscreen) {
         el.requestFullscreen().catch(() => {}); // ignore if TV browser blocks it
