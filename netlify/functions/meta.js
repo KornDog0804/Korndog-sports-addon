@@ -1,6 +1,7 @@
 // netlify/functions/meta.js
 
 const { getMergedSportsChannels } = require('../../lib/sources');
+const { getConcertItems } = require('../../lib/providers/concerts');
 
 function decode(value) {
   try {
@@ -17,7 +18,6 @@ function parseRequest(event) {
 
   const path = event.path || event.rawPath || '';
   const match = path.match(/\/meta\/([^/]+)\/([^/]+)\.json$/);
-
   if (match) {
     type = type || decode(match[1]);
     id = id || decode(match[2]);
@@ -44,6 +44,50 @@ exports.handler = async (event) => {
   }
 
   try {
+    if (id.startsWith('concert-')) {
+      const items = await getConcertItems();
+      const item = items.find(it => it.id === id);
+
+      if (!item) {
+        return {
+          statusCode: 200,
+          headers,
+          body: JSON.stringify({ meta: null })
+        };
+      }
+
+      const meta = {
+        id: item.id,
+        type: 'tv',
+        name: item.name,
+        poster: item.logo || undefined,
+        posterShape: 'poster',
+        background: item.logo || undefined,
+        description: item.description || `${item.folder || 'Concert Corner'} session`,
+        genres: ['Concerts'],
+        releaseInfo: item.folder || 'Concert Corner',
+        behaviorHints: {
+          defaultVideoId: item.id
+        },
+        videos: [
+          {
+            id: item.id,
+            title: item.tracks && item.tracks.length > 1
+              ? `Full Set (${item.tracks.length} songs)`
+              : 'Watch',
+            released: new Date().toISOString(),
+            available: true
+          }
+        ]
+      };
+
+      return {
+        statusCode: 200,
+        headers,
+        body: JSON.stringify({ meta })
+      };
+    }
+
     const channels = await getMergedSportsChannels();
     const channel = channels.find(item => item.id === id);
 
@@ -90,7 +134,6 @@ exports.handler = async (event) => {
     };
   } catch (error) {
     console.error('[meta] failed:', error);
-
     return {
       statusCode: 200,
       headers,
