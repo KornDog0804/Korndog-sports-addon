@@ -75,7 +75,10 @@ exports.handler = async (event) => {
           {
             name: 'KornDog Sports',
             title: `${channel.name} (${channel.source})`,
-            url: channel.streamUrl
+            url:
+          channel.source === 'plex'
+            ? `${process.env.URL}/.netlify/functions/plex-hls?id=${encodeURIComponent(channel.id)}`
+            : channel.streamUrl
           }
         ]
       })
