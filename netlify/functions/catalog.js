@@ -59,13 +59,14 @@ exports.handler = async event => {
   }
 
   try {
-    // Concert Corner is a completely separate data source/shape (YouTube
-    // links, not verified live channels) - handled here and returned early,
-    // so it never touches the sports channel filtering/scoring below.
     if (catalog.category === 'Concerts') {
       const items = await getConcertItems();
 
-      const metas = items.map(item => ({
+      const filtered = catalog.folderMatch
+        ? items.filter(it => (it.folder || '').includes(catalog.folderMatch))
+        : items;
+
+      const metas = filtered.map(item => ({
         id: item.id,
         type: 'tv',
         name: item.name,
