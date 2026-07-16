@@ -139,6 +139,14 @@
         t.classList.toggle('active', t.dataset.catId === target.id);
       });
       loadCatalog(target.id, target.name);
+
+      // Scroll the tab strip so the active tab is actually visible, instead
+      // of landing on Concert Corner while the tab bar still shows sports
+      // tabs scrolled off to the left.
+      const activeTabEl = document.querySelector(`.tab[data-cat-id="${target.id}"]`);
+      if (activeTabEl) {
+        activeTabEl.scrollIntoView({ behavior: 'instant', inline: 'center', block: 'nearest' });
+      }
     }
   }
 
@@ -187,16 +195,11 @@
     const stream = (data.streams || [])[0];
     if (!stream) return;
 
-    // Concert Corner items use externalUrl pointing at watch.html - just
-    // navigate there directly, it already handles single/multi-track playback.
     if (stream.externalUrl) {
       window.location.href = stream.externalUrl;
       return;
     }
 
-    // Sports channels are HLS (.m3u8) - play in-page using hls.js for
-    // Chrome/Firefox/Edge, or natively for Safari (which supports HLS
-    // built-in and doesn't need hls.js at all).
     catalogView.style.display = 'none';
     playerView.classList.add('show');
     backBtn.classList.add('show');
@@ -210,10 +213,6 @@
       video.play().catch(() => {});
     } else if (window.Hls && Hls.isSupported()) {
       currentHls = new Hls({
-        // Plex's proxied playlists can be slower to stabilize than direct
-        // Pluto streams - give hls.js more patience before giving up, and
-        // let it auto-recover from the kind of transient network/parsing
-        // errors that were likely causing the black screen.
         manifestLoadingTimeOut: 15000,
         manifestLoadingMaxRetry: 4,
         levelLoadingTimeOut: 15000
@@ -224,10 +223,10 @@
         if (data.fatal) {
           switch (data.type) {
             case Hls.ErrorTypes.NETWORK_ERROR:
-              currentHls.startLoad(); // retry loading
+              currentHls.startLoad();
               break;
             case Hls.ErrorTypes.MEDIA_ERROR:
-              currentHls.recoverMediaError(); // retry decoding
+              currentHls.recoverMediaError();
               break;
             default:
               document.getElementById('player-desc').textContent =
