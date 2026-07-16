@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-16T18:54:07.914Z",
-  "discoveredCount": 379,
-  "verifiedCount": 197,
+  "generatedAt": "2026-07-16T19:29:31.621Z",
+  "discoveredCount": 342,
+  "verifiedCount": 157,
   "channels": [
     {
       "id": "iptvorg-ACCDigitalNetwork.us@SD-4",
@@ -13,8 +13,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": true,
-      "checkedAt": "2026-07-16T18:48:51.936Z",
-      "latencyMs": 5469,
+      "checkedAt": "2026-07-16T19:24:25.380Z",
+      "latencyMs": 6091,
       "score": 115,
       "probe": {
         "hasVideo": true,
@@ -40,8 +40,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": true,
-      "checkedAt": "2026-07-16T18:49:42.738Z",
-      "latencyMs": 4737,
+      "checkedAt": "2026-07-16T19:25:19.594Z",
+      "latencyMs": 6454,
       "score": 115,
       "probe": {
         "hasVideo": true,
@@ -67,8 +67,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": true,
-      "checkedAt": "2026-07-16T18:51:05.611Z",
-      "latencyMs": 6294,
+      "checkedAt": "2026-07-16T19:26:29.852Z",
+      "latencyMs": 5817,
       "score": 115,
       "probe": {
         "hasVideo": true,
@@ -94,90 +94,9 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": true,
-      "checkedAt": "2026-07-16T18:51:26.753Z",
-      "latencyMs": 4458,
-      "score": 115,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1920,
-        "maxHeight": 1080,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-PGATour.us@SD-265",
-      "sourceId": "PGATour.us@SD",
-      "name": "PGA Tour (1080p)",
-      "logo": "https://i.imgur.com/J0TY9dG.png",
-      "source": "iptv-org",
-      "streamUrl": "https://d11k1mnrgfposz.cloudfront.net/playlist.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": true,
-      "checkedAt": "2026-07-16T18:51:45.322Z",
-      "latencyMs": 7294,
-      "score": 115,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1920,
-        "maxHeight": 1080,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-WorldPokerTour.us@Poland-454",
-      "sourceId": "WorldPokerTour.us@Poland",
-      "name": "World Poker Tour (1080p)",
-      "logo": "https://i.imgur.com/98kLMjj.png",
-      "source": "iptv-org",
-      "streamUrl": "https://d39g1vxj2ef6in.cloudfront.net/v1/master/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/playlist.m3u8?ads.xumo_channelId=88883102",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": true,
-      "checkedAt": "2026-07-16T18:53:56.244Z",
-      "latencyMs": 6365,
-      "score": 115,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1920,
-        "maxHeight": 1080,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-WorldPokerTour.us@US-456",
-      "sourceId": "WorldPokerTour.us@US",
-      "name": "World Poker Tour (1080p)",
-      "logo": "https://i.imgur.com/98kLMjj.png",
-      "source": "iptv-org",
-      "streamUrl": "https://d2e00kr7m9coe4.cloudfront.net/scheduler/scheduleMaster/406.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": true,
-      "checkedAt": "2026-07-16T18:53:57.962Z",
-      "latencyMs": 4794,
-      "score": 115,
+      "checkedAt": "2026-07-16T19:26:55.859Z",
+      "latencyMs": 11780,
+      "score": 105,
       "probe": {
         "hasVideo": true,
         "hasAudio": true,
@@ -202,8 +121,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": true,
-      "checkedAt": "2026-07-16T18:52:40.184Z",
-      "latencyMs": 6841,
+      "checkedAt": "2026-07-16T19:27:54.709Z",
+      "latencyMs": 5944,
       "score": 105,
       "probe": {
         "hasVideo": true,
@@ -220,99 +139,18 @@
       }
     },
     {
-      "id": "iptvorg-PFLMMA.us@SD-264",
-      "sourceId": "PFLMMA.us@SD",
-      "name": "PFL MMA (720p)",
-      "logo": "https://provider-static.plex.tv/epg/cms/production/96dd0531-b500-4bd4-93ca-763cbf46defe/1500x1000_PFL_SHIELD_DARK_BG_-_Allie_Dinsmore.png",
+      "id": "iptvorg-WorldPokerTour.us@US-456",
+      "sourceId": "WorldPokerTour.us@US",
+      "name": "World Poker Tour (1080p)",
+      "logo": "https://i.imgur.com/98kLMjj.png",
       "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-64f6180130ab3300083d896b.m3u8",
+      "streamUrl": "https://d2e00kr7m9coe4.cloudfront.net/scheduler/scheduleMaster/406.m3u8",
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": true,
-      "checkedAt": "2026-07-16T18:51:41.805Z",
-      "latencyMs": 4829,
-      "score": 100,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-MonsterJam.us@SD-231",
-      "sourceId": "MonsterJam.us@SD",
-      "name": "Monster Jam (720p)",
-      "logo": "https://provider-static.plex.tv/epg/cms/production/23824964-562b-4498-9eaa-d6262cb7e0c3/Monster_Jam_Logo_on_Transparent_1500x1000_Casey_Murawski.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-65bcc9c8d77d450008b34c6b.m3u8",
-      "description": "Outdoor;Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": true,
-      "checkedAt": "2026-07-16T18:51:11.925Z",
-      "latencyMs": 5682,
-      "score": 95,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1216,
-        "maxHeight": 684,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-PBRRidePass.us@SD-262",
-      "sourceId": "PBRRidePass.us@SD",
-      "name": "PBR RidePass (720p)",
-      "logo": "https://i.imgur.com/gUxH97E.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-60d39387706fe50007fda8e8.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": true,
-      "checkedAt": "2026-07-16T18:51:40.758Z",
-      "latencyMs": 4950,
-      "score": 95,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1216,
-        "maxHeight": 684,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-RedBullTV.at@EUMENA-316",
-      "sourceId": "RedBullTV.at@EUMENA",
-      "name": "Red Bull TV (1080p)",
-      "logo": "https://images.pluto.tv/channels/5e7cb84a172a0f0007da69e4/colorLogoPNG.png",
-      "source": "iptv-org",
-      "streamUrl": "https://3ea22335.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWdiX1JlZEJ1bGxUVl9ITFM/playlist.m3u8",
-      "description": "Outdoor;Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": true,
-      "checkedAt": "2026-07-16T18:52:20.517Z",
-      "latencyMs": 10589,
-      "score": 95,
+      "checkedAt": "2026-07-16T19:29:19.248Z",
+      "latencyMs": 9723,
+      "score": 105,
       "probe": {
         "hasVideo": true,
         "hasAudio": true,
@@ -328,33 +166,6 @@
       }
     },
     {
-      "id": "iptvorg-WorldPokerTour.us@Germany-453",
-      "sourceId": "WorldPokerTour.us@Germany",
-      "name": "World Poker Tour",
-      "logo": "https://i.imgur.com/98kLMjj.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-5ad9b7aae738977e2c312132.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": true,
-      "checkedAt": "2026-07-16T18:53:55.803Z",
-      "latencyMs": 6876,
-      "score": 95,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1216,
-        "maxHeight": 684,
-        "audioChannels": 2
-      }
-    },
-    {
       "id": "iptvorg-ACCNetwork.us@SD-3",
       "sourceId": "ACCNetwork.us@SD",
       "name": "ACC Network (720p)",
@@ -364,8 +175,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": true,
-      "checkedAt": "2026-07-16T18:48:47.483Z",
-      "latencyMs": 1030,
+      "checkedAt": "2026-07-16T19:24:21.069Z",
+      "latencyMs": 1789,
       "score": 60,
       "probe": {
         "hasVideo": true,
@@ -391,8 +202,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": true,
-      "checkedAt": "2026-07-16T18:52:53.010Z",
-      "latencyMs": 3801,
+      "checkedAt": "2026-07-16T19:28:08.613Z",
+      "latencyMs": 5219,
       "score": 55,
       "probe": {
         "hasVideo": true,
@@ -418,116 +229,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:00.408Z",
-      "latencyMs": 8904,
-      "score": 100,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1920,
-        "maxHeight": 1080,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-beINSPORTSXTRA.us@SD-79",
-      "sourceId": "beINSPORTSXTRA.us@SD",
-      "name": "beIN SPORTS XTRA (1080p)",
-      "logo": "https://i.ibb.co/HT49GPmB/XTRA-2.png",
-      "source": "iptv-org",
-      "streamUrl": "https://bein-xtra-bein.amagi.tv/playlist.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:48:59.366Z",
-      "latencyMs": 6610,
-      "score": 100,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1920,
-        "maxHeight": 1080,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-beINSPORTSXTRAenEspanol.us@SD-80",
-      "sourceId": "beINSPORTSXTRAenEspanol.us@SD",
-      "name": "beIN Sports XTRA en Espanol (1080p)",
-      "logo": "https://i.imgur.com/V562tpO.png",
-      "source": "iptv-org",
-      "streamUrl": "https://dc1644a9jazgj.cloudfront.net/beIN_Sports_Xtra_Espanol.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:49:00.727Z",
-      "latencyMs": 4721,
-      "score": 100,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1920,
-        "maxHeight": 1080,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-BilliardTV.us@SD-84",
-      "sourceId": "BilliardTV.us@SD",
-      "name": "Billiard TV (1080p) [Geo-blocked]",
-      "logo": "https://i.imgur.com/BZijfKh.png",
-      "source": "iptv-org",
-      "streamUrl": "https://pb-wm04vonaerv0k.akamaized.net/billi.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:49:04.877Z",
-      "latencyMs": 6384,
-      "score": 100,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1920,
-        "maxHeight": 1080,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-DDSports.in@SD-110",
-      "sourceId": "DDSports.in@SD",
-      "name": "DD Sports SD (1080p)",
-      "logo": "https://dtil.tmsimg.com/assets/s158255_ld_h15_aa.png?lock=720x540",
-      "source": "iptv-org",
-      "streamUrl": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:49:23.540Z",
-      "latencyMs": 7776,
+      "checkedAt": "2026-07-16T19:24:31.681Z",
+      "latencyMs": 8207,
       "score": 100,
       "probe": {
         "hasVideo": true,
@@ -553,8 +256,89 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:50:06.606Z",
-      "latencyMs": 6710,
+      "checkedAt": "2026-07-16T19:25:35.678Z",
+      "latencyMs": 5655,
+      "score": 100,
+      "probe": {
+        "hasVideo": true,
+        "hasAudio": true,
+        "videoCodecs": [
+          "h264"
+        ],
+        "audioCodecs": [
+          "aac"
+        ],
+        "maxWidth": 1920,
+        "maxHeight": 1080,
+        "audioChannels": 2
+      }
+    },
+    {
+      "id": "iptvorg-FloHockey.us@HD-155",
+      "sourceId": "FloHockey.us@HD",
+      "name": "FloHockey 24/7 (1080p)",
+      "logo": "https://images.fubo.tv/channel-config-ui/station-logos/on-dark/flohockey-white.png",
+      "source": "iptv-org",
+      "streamUrl": "https://amg02278-amg02278c2-flosports-worldwide-9916.playouts.now.amagi.tv/playlist.m3u8",
+      "description": "Sports · Public stream indexed by iptv-org",
+      "verified": true,
+      "priority": false,
+      "checkedAt": "2026-07-16T19:25:37.955Z",
+      "latencyMs": 6802,
+      "score": 100,
+      "probe": {
+        "hasVideo": true,
+        "hasAudio": true,
+        "videoCodecs": [
+          "h264"
+        ],
+        "audioCodecs": [
+          "aac"
+        ],
+        "maxWidth": 1920,
+        "maxHeight": 1080,
+        "audioChannels": 2
+      }
+    },
+    {
+      "id": "iptvorg-FloRacing.us@HD-156",
+      "sourceId": "FloRacing.us@HD",
+      "name": "FloRacing 24/7 (1080p)",
+      "logo": "https://images.fubo.tv/channel-config-ui/station-logos/on-dark/floracing-white.png",
+      "source": "iptv-org",
+      "streamUrl": "https://amg02278-amg02278c1-flosports-worldwide-7592.playouts.now.amagi.tv/playlist.m3u8",
+      "description": "Sports · Public stream indexed by iptv-org",
+      "verified": true,
+      "priority": false,
+      "checkedAt": "2026-07-16T19:25:39.137Z",
+      "latencyMs": 6948,
+      "score": 100,
+      "probe": {
+        "hasVideo": true,
+        "hasAudio": true,
+        "videoCodecs": [
+          "h264"
+        ],
+        "audioCodecs": [
+          "aac"
+        ],
+        "maxWidth": 1920,
+        "maxHeight": 1080,
+        "audioChannels": 2
+      }
+    },
+    {
+      "id": "iptvorg-FuboSportsNetwork.us@SD-167",
+      "sourceId": "FuboSportsNetwork.us@SD",
+      "name": "fubo Sports Network (1080p)",
+      "logo": "https://i.imgur.com/qFNRJLb.png",
+      "source": "iptv-org",
+      "streamUrl": "https://dnf08l6u6uxnz.cloudfront.net/master.m3u8",
+      "description": "Sports · Public stream indexed by iptv-org",
+      "verified": true,
+      "priority": false,
+      "checkedAt": "2026-07-16T19:25:48.040Z",
+      "latencyMs": 8111,
       "score": 100,
       "probe": {
         "hasVideo": true,
@@ -580,8 +364,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:50:27.760Z",
-      "latencyMs": 8949,
+      "checkedAt": "2026-07-16T19:25:55.535Z",
+      "latencyMs": 8111,
       "score": 100,
       "probe": {
         "hasVideo": true,
@@ -607,8 +391,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:50:34.019Z",
-      "latencyMs": 6478,
+      "checkedAt": "2026-07-16T19:26:00.995Z",
+      "latencyMs": 6214,
       "score": 100,
       "probe": {
         "hasVideo": true,
@@ -634,8 +418,8 @@
       "description": "Auto;Outdoor;Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:50:38.257Z",
-      "latencyMs": 7953,
+      "checkedAt": "2026-07-16T19:26:03.147Z",
+      "latencyMs": 6880,
       "score": 100,
       "probe": {
         "hasVideo": true,
@@ -661,143 +445,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:51:22.295Z",
-      "latencyMs": 5767,
-      "score": 100,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1920,
-        "maxHeight": 1080,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-NBCSportsNOW.us@SD-246",
-      "sourceId": "NBCSportsNOW.us@SD",
-      "name": "NBC Sports NOW (1080p)",
-      "logo": "https://i.imgur.com/EzNf2Yx.png",
-      "source": "iptv-org",
-      "streamUrl": "https://d4whmvwm0rdvi.cloudfront.net/10007/99993008/hls/master.m3u8?ads.xumo_channelId=99993008",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:51:24.020Z",
-      "latencyMs": 6399,
-      "score": 100,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1920,
-        "maxHeight": 1080,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-NHLNetwork.us@SD-251",
-      "sourceId": "NHLNetwork.us@SD",
-      "name": "NHL Network (1080p)",
-      "logo": "https://i.imgur.com/UNZ8bef.png",
-      "source": "iptv-org",
-      "streamUrl": "https://nhl-firetv.amagi.tv/playlist.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:51:30.129Z",
-      "latencyMs": 6108,
-      "score": 100,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1920,
-        "maxHeight": 1080,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-NHRATV.us@SD-252",
-      "sourceId": "NHRATV.us@SD",
-      "name": "NHRA TV (1080p)",
-      "logo": "https://i.imgur.com/jZgcm4k.png",
-      "source": "iptv-org",
-      "streamUrl": "https://d265y4sk8257lt.cloudfront.net/nh.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:51:30.981Z",
-      "latencyMs": 6459,
-      "score": 100,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1920,
-        "maxHeight": 1080,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-Pac12Insider.us@SD-261",
-      "sourceId": "Pac12Insider.us@SD",
-      "name": "Pac 12 Insider (1080p)",
-      "logo": "https://i.imgur.com/736QREy.png",
-      "source": "iptv-org",
-      "streamUrl": "https://pac12-firetv.amagi.tv/playlist.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:51:38.383Z",
-      "latencyMs": 5565,
-      "score": 100,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1920,
-        "maxHeight": 1080,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-RacerSelect.us@SD-309",
-      "sourceId": "RacerSelect.us@SD",
-      "name": "Racer Select (1080p)",
-      "logo": "https://i.imgur.com/CurtYvn.png",
-      "source": "iptv-org",
-      "streamUrl": "https://amg00378-amg00378c4-freelivesports-emea-5637.playouts.now.amagi.tv/playlist.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:52:13.914Z",
-      "latencyMs": 5665,
+      "checkedAt": "2026-07-16T19:26:47.674Z",
+      "latencyMs": 8231,
       "score": 100,
       "probe": {
         "hasVideo": true,
@@ -823,8 +472,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:52:56.320Z",
-      "latencyMs": 7529,
+      "checkedAt": "2026-07-16T19:28:09.208Z",
+      "latencyMs": 6057,
       "score": 100,
       "probe": {
         "hasVideo": true,
@@ -850,8 +499,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:26.688Z",
-      "latencyMs": 6517,
+      "checkedAt": "2026-07-16T19:28:42.853Z",
+      "latencyMs": 6982,
       "score": 100,
       "probe": {
         "hasVideo": true,
@@ -877,8 +526,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:32.589Z",
-      "latencyMs": 5028,
+      "checkedAt": "2026-07-16T19:28:49.457Z",
+      "latencyMs": 5276,
       "score": 100,
       "probe": {
         "hasVideo": true,
@@ -904,8 +553,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:48.552Z",
-      "latencyMs": 1770,
+      "checkedAt": "2026-07-16T19:29:05.930Z",
+      "latencyMs": 1418,
       "score": 100,
       "probe": {
         "hasVideo": true,
@@ -931,35 +580,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:52.459Z",
-      "latencyMs": 5574,
-      "score": 100,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1920,
-        "maxHeight": 1080,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-WorldofFreesports.de@SD-452",
-      "sourceId": "WorldofFreesports.de@SD",
-      "name": "World of Freesports (1080p)",
-      "logo": "https://i.imgur.com/lta5Mog.png",
-      "source": "iptv-org",
-      "streamUrl": "https://mainstreammedia-worldoffreesportsintl-rakuten.amagi.tv/playlist.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:53:55.414Z",
-      "latencyMs": 6860,
+      "checkedAt": "2026-07-16T19:29:10.642Z",
+      "latencyMs": 5868,
       "score": 100,
       "probe": {
         "hasVideo": true,
@@ -985,8 +607,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:59.912Z",
-      "latencyMs": 8996,
+      "checkedAt": "2026-07-16T19:25:32.219Z",
+      "latencyMs": 6934,
       "score": 95,
       "probe": {
         "hasVideo": true,
@@ -1003,17 +625,98 @@
       }
     },
     {
-      "id": "iptvorg-CRTV.cl@SD-103",
-      "sourceId": "CRTV.cl@SD",
-      "name": "CRTV (720p)",
-      "logo": "https://i2.paste.pics/bf68b159547597c39574aec9dd7c626a.png",
+      "id": "iptvorg-beINSPORTSXTRA.us@SD-79",
+      "sourceId": "beINSPORTSXTRA.us@SD",
+      "name": "beIN SPORTS XTRA (1080p)",
+      "logo": "https://i.ibb.co/HT49GPmB/XTRA-2.png",
       "source": "iptv-org",
-      "streamUrl": "https://stmv2.voxtvhd.com.br/crtvchile/crtvchile/playlist.m3u8",
+      "streamUrl": "https://bein-xtra-bein.amagi.tv/playlist.m3u8",
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:13.401Z",
-      "latencyMs": 1696,
+      "checkedAt": "2026-07-16T19:24:36.103Z",
+      "latencyMs": 10295,
+      "score": 90,
+      "probe": {
+        "hasVideo": true,
+        "hasAudio": true,
+        "videoCodecs": [
+          "h264"
+        ],
+        "audioCodecs": [
+          "aac"
+        ],
+        "maxWidth": 1920,
+        "maxHeight": 1080,
+        "audioChannels": 2
+      }
+    },
+    {
+      "id": "iptvorg-beINSPORTSXTRAenEspanol.us@SD-80",
+      "sourceId": "beINSPORTSXTRAenEspanol.us@SD",
+      "name": "beIN Sports XTRA en Espanol (1080p)",
+      "logo": "https://i.imgur.com/V562tpO.png",
+      "source": "iptv-org",
+      "streamUrl": "https://dc1644a9jazgj.cloudfront.net/beIN_Sports_Xtra_Espanol.m3u8",
+      "description": "Sports · Public stream indexed by iptv-org",
+      "verified": true,
+      "priority": false,
+      "checkedAt": "2026-07-16T19:24:41.029Z",
+      "latencyMs": 11428,
+      "score": 90,
+      "probe": {
+        "hasVideo": true,
+        "hasAudio": true,
+        "videoCodecs": [
+          "h264"
+        ],
+        "audioCodecs": [
+          "aac"
+        ],
+        "maxWidth": 1920,
+        "maxHeight": 1080,
+        "audioChannels": 2
+      }
+    },
+    {
+      "id": "iptvorg-BilliardTV.us@SD-84",
+      "sourceId": "BilliardTV.us@SD",
+      "name": "Billiard TV (1080p) [Geo-blocked]",
+      "logo": "https://i.imgur.com/BZijfKh.png",
+      "source": "iptv-org",
+      "streamUrl": "https://pb-wm04vonaerv0k.akamaized.net/billi.m3u8",
+      "description": "Sports · Public stream indexed by iptv-org",
+      "verified": true,
+      "priority": false,
+      "checkedAt": "2026-07-16T19:24:41.197Z",
+      "latencyMs": 9875,
+      "score": 90,
+      "probe": {
+        "hasVideo": true,
+        "hasAudio": true,
+        "videoCodecs": [
+          "h264"
+        ],
+        "audioCodecs": [
+          "aac"
+        ],
+        "maxWidth": 1920,
+        "maxHeight": 1080,
+        "audioChannels": 2
+      }
+    },
+    {
+      "id": "iptvorg-DDSports.in@SD-110",
+      "sourceId": "DDSports.in@SD",
+      "name": "DD Sports SD (1080p)",
+      "logo": "https://dtil.tmsimg.com/assets/s158255_ld_h15_aa.png?lock=720x540",
+      "source": "iptv-org",
+      "streamUrl": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8",
+      "description": "Sports · Public stream indexed by iptv-org",
+      "verified": true,
+      "priority": false,
+      "checkedAt": "2026-07-16T19:24:58.216Z",
+      "latencyMs": 10102,
       "score": 90,
       "probe": {
         "hasVideo": true,
@@ -1039,8 +742,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:27.983Z",
-      "latencyMs": 4629,
+      "checkedAt": "2026-07-16T19:25:02.776Z",
+      "latencyMs": 7636,
       "score": 90,
       "probe": {
         "hasVideo": true,
@@ -1066,8 +769,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:42.269Z",
-      "latencyMs": 2666,
+      "checkedAt": "2026-07-16T19:25:21.731Z",
+      "latencyMs": 5922,
       "score": 90,
       "probe": {
         "hasVideo": true,
@@ -1084,17 +787,17 @@
       }
     },
     {
-      "id": "iptvorg-FloHockey.us@HD-155",
-      "sourceId": "FloHockey.us@HD",
-      "name": "FloHockey 24/7 (1080p)",
-      "logo": "https://images.fubo.tv/channel-config-ui/station-logos/on-dark/flohockey-white.png",
+      "id": "iptvorg-FTFSports.us@SD-165",
+      "sourceId": "FTFSports.us@SD",
+      "name": "FTF Sports (720p)",
+      "logo": "https://i.imgur.com/yvUjOI3.png",
       "source": "iptv-org",
-      "streamUrl": "https://amg02278-amg02278c2-flosports-worldwide-9916.playouts.now.amagi.tv/playlist.m3u8",
+      "streamUrl": "https://1593604785.rsc.cdn77.org/FTF/FTF_SCTE.m3u8",
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:50:09.437Z",
-      "latencyMs": 9525,
+      "checkedAt": "2026-07-16T19:25:46.367Z",
+      "latencyMs": 6536,
       "score": 90,
       "probe": {
         "hasVideo": true,
@@ -1111,17 +814,17 @@
       }
     },
     {
-      "id": "iptvorg-FloRacing.us@HD-156",
-      "sourceId": "FloRacing.us@HD",
-      "name": "FloRacing 24/7 (1080p)",
-      "logo": "https://images.fubo.tv/channel-config-ui/station-logos/on-dark/floracing-white.png",
+      "id": "iptvorg-FUELTV.pt@SD-170",
+      "sourceId": "FUELTV.pt@SD",
+      "name": "Fuel TV (1080p)",
+      "logo": "https://i.imgur.com/I8mviBy.png",
       "source": "iptv-org",
-      "streamUrl": "https://amg02278-amg02278c1-flosports-worldwide-7592.playouts.now.amagi.tv/playlist.m3u8",
+      "streamUrl": "https://amg01074-fueltv-amg01074c1-stirr-us-4214.playouts.now.amagi.tv/playlist.m3u8",
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:50:11.102Z",
-      "latencyMs": 9963,
+      "checkedAt": "2026-07-16T19:25:54.780Z",
+      "latencyMs": 11306,
       "score": 90,
       "probe": {
         "hasVideo": true,
@@ -1147,8 +850,35 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:50:22.968Z",
-      "latencyMs": 7888,
+      "checkedAt": "2026-07-16T19:25:49.174Z",
+      "latencyMs": 4607,
+      "score": 90,
+      "probe": {
+        "hasVideo": true,
+        "hasAudio": true,
+        "videoCodecs": [
+          "h264"
+        ],
+        "audioCodecs": [
+          "aac"
+        ],
+        "maxWidth": 1920,
+        "maxHeight": 1080,
+        "audioChannels": 2
+      }
+    },
+    {
+      "id": "iptvorg-HTSporTV.tr@SD-188",
+      "sourceId": "HTSporTV.tr@SD",
+      "name": "HTSpor TV (1080p)",
+      "logo": "https://www.htspor.com/images/manifest/social-share-logo.png",
+      "source": "iptv-org",
+      "streamUrl": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
+      "description": "Sports · Public stream indexed by iptv-org",
+      "verified": true,
+      "priority": false,
+      "checkedAt": "2026-07-16T19:26:04.362Z",
+      "latencyMs": 8827,
       "score": 90,
       "probe": {
         "hasVideo": true,
@@ -1174,35 +904,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:50:53.067Z",
-      "latencyMs": 4038,
-      "score": 90,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1920,
-        "maxHeight": 1080,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-MMATVcom.ru@SD-228",
-      "sourceId": "MMATVcom.ru@SD",
-      "name": "MMA TV.com (1080p)",
-      "logo": "https://i.imgur.com/QhdxNsB.png",
-      "source": "iptv-org",
-      "streamUrl": "https://streams2.sofast.tv/vglive-sk-462904/playlist.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:51:14.037Z",
-      "latencyMs": 8827,
+      "checkedAt": "2026-07-16T19:26:16.301Z",
+      "latencyMs": 3988,
       "score": 90,
       "probe": {
         "hasVideo": true,
@@ -1228,8 +931,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:51:12.133Z",
-      "latencyMs": 6521,
+      "checkedAt": "2026-07-16T19:26:34.161Z",
+      "latencyMs": 4309,
       "score": 90,
       "probe": {
         "hasVideo": true,
@@ -1255,8 +958,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:51:09.455Z",
-      "latencyMs": 2790,
+      "checkedAt": "2026-07-16T19:26:32.632Z",
+      "latencyMs": 1764,
       "score": 90,
       "probe": {
         "hasVideo": true,
@@ -1282,8 +985,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:51:22.147Z",
-      "latencyMs": 6455,
+      "checkedAt": "2026-07-16T19:26:45.644Z",
+      "latencyMs": 7056,
       "score": 90,
       "probe": {
         "hasVideo": true,
@@ -1309,8 +1012,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:52:54.230Z",
-      "latencyMs": 3752,
+      "checkedAt": "2026-07-16T19:28:08.383Z",
+      "latencyMs": 2616,
       "score": 90,
       "probe": {
         "hasVideo": true,
@@ -1336,8 +1039,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:52:58.051Z",
-      "latencyMs": 5039,
+      "checkedAt": "2026-07-16T19:28:13.697Z",
+      "latencyMs": 5313,
       "score": 90,
       "probe": {
         "hasVideo": true,
@@ -1354,17 +1057,17 @@
       }
     },
     {
-      "id": "iptvorg-SuperTennis.it@SD-382",
-      "sourceId": "SuperTennis.it@SD",
-      "name": "SuperTennis (1080p)",
-      "logo": "https://upload.wikimedia.org/wikipedia/it/thumb/6/6a/SuperTennis_-_Logo_2016.svg/960px-SuperTennis_-_Logo_2016.svg.png",
+      "id": "iptvorg-talkSPORT.uk@SD-388",
+      "sourceId": "talkSPORT.uk@SD",
+      "name": "talkSPORT (1080p)",
+      "logo": "https://upload.wikimedia.org/wikipedia/en/9/9d/Talksport_logo.png",
       "source": "iptv-org",
-      "streamUrl": "https://live-embed.supertennix.hiway.media/restreamer/supertennix_client/gpu-a-c0-16/restreamer/outgest/aa3673f1-e178-44a9-a947-ef41db73211a/manifest.m3u8",
+      "streamUrl": "https://af7a8b4e.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfdGFsa1NQT1JUX0hMUw/playlist.m3u8",
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:07.875Z",
-      "latencyMs": 5397,
+      "checkedAt": "2026-07-16T19:28:28.858Z",
+      "latencyMs": 8717,
       "score": 90,
       "probe": {
         "hasVideo": true,
@@ -1381,17 +1084,17 @@
       }
     },
     {
-      "id": "iptvorg-SwerveSports.us@SD-383",
-      "sourceId": "SwerveSports.us@SD",
-      "name": "Swerve Combat (1080p)",
-      "logo": "https://i.imgur.com/GT0Yi2T.png",
+      "id": "iptvorg-TraceSportStars.fr@Russia-409",
+      "sourceId": "TraceSportStars.fr@Russia",
+      "name": "Trace Sport Stars Russia (720p)",
+      "logo": "https://i.imgur.com/FabFP5A.png",
       "source": "iptv-org",
-      "streamUrl": "https://linear-253.frequency.stream/mt/roku/253/hls/master/playlist.m3u8",
+      "streamUrl": "https://stream8.cinerama.uz/1274/tracks-v1a1/mono.m3u8",
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:09.299Z",
-      "latencyMs": 6381,
+      "checkedAt": "2026-07-16T19:28:44.180Z",
+      "latencyMs": 8120,
       "score": 90,
       "probe": {
         "hasVideo": true,
@@ -1408,18 +1111,18 @@
       }
     },
     {
-      "id": "iptvorg-30AGolfKingdom.us@SD-0",
-      "sourceId": "30AGolfKingdom.us@SD",
-      "name": "30A Golf Kingdom (720p)",
-      "logo": "https://i.imgur.com/Lv53nh4.png",
+      "id": "iptvorg-vijuPlusSport.ru@SD-444",
+      "sourceId": "vijuPlusSport.ru@SD",
+      "name": "viju+ Sport",
+      "logo": "https://i.imgur.com/fXESG0l.png",
       "source": "iptv-org",
-      "streamUrl": "https://30a-tv.com/feeds/vidaa/golf.m3u8",
+      "streamUrl": "https://stream8.cinerama.uz/1229/tracks-v1a1/mono.m3u8",
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:48:50.813Z",
-      "latencyMs": 4394,
-      "score": 85,
+      "checkedAt": "2026-07-16T19:29:07.538Z",
+      "latencyMs": 5895,
+      "score": 90,
       "probe": {
         "hasVideo": true,
         "hasAudio": true,
@@ -1429,8 +1132,8 @@
         "audioCodecs": [
           "aac"
         ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
+        "maxWidth": 1920,
+        "maxHeight": 1080,
         "audioChannels": 2
       }
     },
@@ -1444,8 +1147,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:48:50.157Z",
-      "latencyMs": 3679,
+      "checkedAt": "2026-07-16T19:24:23.369Z",
+      "latencyMs": 4074,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -1471,8 +1174,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:02.470Z",
-      "latencyMs": 5674,
+      "checkedAt": "2026-07-16T19:24:39.175Z",
+      "latencyMs": 7873,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -1498,8 +1201,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:06.756Z",
-      "latencyMs": 4647,
+      "checkedAt": "2026-07-16T19:24:44.172Z",
+      "latencyMs": 5491,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -1525,8 +1228,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:10.656Z",
-      "latencyMs": 2650,
+      "checkedAt": "2026-07-16T19:24:46.064Z",
+      "latencyMs": 3171,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -1543,17 +1246,17 @@
       }
     },
     {
-      "id": "iptvorg-DAZNDartsxPlutoTV.de@DACH-107",
-      "sourceId": "DAZNDartsxPlutoTV.de@DACH",
-      "name": "DAZN Darts x Pluto TV",
-      "logo": "https://images.pluto.tv/channels/64b67f0424ade50008a3be17/colorLogoPNG.png",
+      "id": "iptvorg-CRTV.cl@SD-103",
+      "sourceId": "CRTV.cl@SD",
+      "name": "CRTV (720p)",
+      "logo": "https://i2.paste.pics/bf68b159547597c39574aec9dd7c626a.png",
       "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-64b67f0424ade50008a3be17.m3u8",
+      "streamUrl": "https://stmv2.voxtvhd.com.br/crtvchile/crtvchile/playlist.m3u8",
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:19.480Z",
-      "latencyMs": 4908,
+      "checkedAt": "2026-07-16T19:24:46.558Z",
+      "latencyMs": 2385,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -1579,8 +1282,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:37.415Z",
-      "latencyMs": 6358,
+      "checkedAt": "2026-07-16T19:25:13.437Z",
+      "latencyMs": 7719,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -1606,8 +1309,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:49.530Z",
-      "latencyMs": 4197,
+      "checkedAt": "2026-07-16T19:25:25.326Z",
+      "latencyMs": 5731,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -1633,8 +1336,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:50.916Z",
-      "latencyMs": 5145,
+      "checkedAt": "2026-07-16T19:25:25.284Z",
+      "latencyMs": 5443,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -1660,8 +1363,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:51.544Z",
-      "latencyMs": 5602,
+      "checkedAt": "2026-07-16T19:25:30.022Z",
+      "latencyMs": 8462,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -1687,8 +1390,89 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:53.421Z",
-      "latencyMs": 5640,
+      "checkedAt": "2026-07-16T19:25:27.725Z",
+      "latencyMs": 5993,
+      "score": 85,
+      "probe": {
+        "hasVideo": true,
+        "hasAudio": true,
+        "videoCodecs": [
+          "h264"
+        ],
+        "audioCodecs": [
+          "aac"
+        ],
+        "maxWidth": 1280,
+        "maxHeight": 720,
+        "audioChannels": 2
+      }
+    },
+    {
+      "id": "iptvorg-FIFAPlus.uk@Portuguese-148",
+      "sourceId": "FIFAPlus.uk@Portuguese",
+      "name": "FIFA+ Portuguese (720p)",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/FIFA%2B_(2025).svg/960px-FIFA%2B_(2025).svg.png",
+      "source": "iptv-org",
+      "streamUrl": "https://e3be9ac5.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctYnJfRklGQVBsdXNQb3J0dWd1ZXNlX0hMUw/playlist.m3u8",
+      "description": "Sports · Public stream indexed by iptv-org",
+      "verified": true,
+      "priority": false,
+      "checkedAt": "2026-07-16T19:25:29.283Z",
+      "latencyMs": 7523,
+      "score": 85,
+      "probe": {
+        "hasVideo": true,
+        "hasAudio": true,
+        "videoCodecs": [
+          "h264"
+        ],
+        "audioCodecs": [
+          "aac"
+        ],
+        "maxWidth": 1280,
+        "maxHeight": 720,
+        "audioChannels": 2
+      }
+    },
+    {
+      "id": "iptvorg-FIFAPlus.uk@Spain-149",
+      "sourceId": "FIFAPlus.uk@Spain",
+      "name": "FIFA+ Spain (720p)",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/FIFA%2B_(2025).svg/960px-FIFA%2B_(2025).svg.png",
+      "source": "iptv-org",
+      "streamUrl": "https://d63fabad.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWVzX0ZJRkFQbHVzU3BhbmlzaF9ITFM/playlist.m3u8",
+      "description": "Sports · Public stream indexed by iptv-org",
+      "verified": true,
+      "priority": false,
+      "checkedAt": "2026-07-16T19:25:31.151Z",
+      "latencyMs": 6828,
+      "score": 85,
+      "probe": {
+        "hasVideo": true,
+        "hasAudio": true,
+        "videoCodecs": [
+          "h264"
+        ],
+        "audioCodecs": [
+          "aac"
+        ],
+        "maxWidth": 1280,
+        "maxHeight": 720,
+        "audioChannels": 2
+      }
+    },
+    {
+      "id": "iptvorg-FIFAPlusWomen.uk@English-151",
+      "sourceId": "FIFAPlusWomen.uk@English",
+      "name": "FIFA+ Women (720p)",
+      "logo": "https://i.imgur.com/xy9ZxVO.png",
+      "source": "iptv-org",
+      "streamUrl": "https://cffda8ff.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9GSUZBUGx1c3dvbWVuX0hMUw/playlist.m3u8",
+      "description": "Sports · Public stream indexed by iptv-org",
+      "verified": true,
+      "priority": false,
+      "checkedAt": "2026-07-16T19:25:32.188Z",
+      "latencyMs": 6861,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -1714,8 +1498,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:50:13.670Z",
-      "latencyMs": 4772,
+      "checkedAt": "2026-07-16T19:25:43.469Z",
+      "latencyMs": 3578,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -1741,8 +1525,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:50:21.810Z",
-      "latencyMs": 4392,
+      "checkedAt": "2026-07-16T19:25:49.334Z",
+      "latencyMs": 2962,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -1768,8 +1552,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:50:27.539Z",
-      "latencyMs": 5729,
+      "checkedAt": "2026-07-16T19:25:56.267Z",
+      "latencyMs": 7091,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -1795,8 +1579,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:50:27.919Z",
-      "latencyMs": 3601,
+      "checkedAt": "2026-07-16T19:25:55.624Z",
+      "latencyMs": 4920,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -1822,8 +1606,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:50:30.303Z",
-      "latencyMs": 2542,
+      "checkedAt": "2026-07-16T19:25:58.170Z",
+      "latencyMs": 2845,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -1849,8 +1633,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:50:43.810Z",
-      "latencyMs": 2692,
+      "checkedAt": "2026-07-16T19:26:07.610Z",
+      "latencyMs": 2551,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -1876,8 +1660,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:51:18.245Z",
-      "latencyMs": 2246,
+      "checkedAt": "2026-07-16T19:26:42.247Z",
+      "latencyMs": 2967,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -1903,467 +1687,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:51:38.530Z",
-      "latencyMs": 2440,
-      "score": 85,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-PKSports.pk@SD-266",
-      "sourceId": "PKSports.pk@SD",
-      "name": "PK Sports (720p)",
-      "logo": "https://raw.githubusercontent.com/songwenhui239/Songwenhui239/refs/heads/main/PK%20Sports.jpeg",
-      "source": "iptv-org",
-      "streamUrl": "https://lbgo.bozztv.com/ssh101/ssh101/pksportshd/playlist.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:51:40.339Z",
-      "latencyMs": 1955,
-      "score": 85,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-PlutoTVCompetition.us@SD-267",
-      "sourceId": "PlutoTVCompetition.us@SD",
-      "name": "Pluto TV Competition",
-      "logo": "https://images.pluto.tv/channels/603fde9026ecbf0007752c2c/colorLogoPNG.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-603fde9026ecbf0007752c2c.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:51:43.486Z",
-      "latencyMs": 4956,
-      "score": 85,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-PlutoTVESports.us@LatAm-269",
-      "sourceId": "PlutoTVESports.us@LatAm",
-      "name": "Pluto TV E-Sports",
-      "logo": "https://images.pluto.tv/channels/5ff3934600d4c7000733ff49/colorLogoPNG.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-5ff3934600d4c7000733ff49.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:51:46.015Z",
-      "latencyMs": 5257,
-      "score": 85,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-PlutoTVEsportes.us@BR-270",
-      "sourceId": "PlutoTVEsportes.us@BR",
-      "name": "Pluto TV Esportes",
-      "logo": "https://images.pluto.tv/channels/5f32d2db0af67400077f29c4/colorLogoSVG_1780355759776.svg",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-5f32d2db0af67400077f29c4.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:51:47.150Z",
-      "latencyMs": 5344,
-      "score": 85,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-PlutoTVFishing.se@DK-271",
-      "sourceId": "PlutoTVFishing.se@DK",
-      "name": "Pluto TV Fishing",
-      "logo": "https://images.pluto.tv/channels/619e1874e0d3a7000729a036/colorLogoPNG.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-619e1874e0d3a7000729a036.m3u8",
-      "description": "Outdoor;Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:51:48.283Z",
-      "latencyMs": 4796,
-      "score": 85,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-PlutoTVFutbol.us@LatAm-272",
-      "sourceId": "PlutoTVFutbol.us@LatAm",
-      "name": "Pluto TV Fútbol",
-      "logo": "https://images.pluto.tv/channels/63c6e37e636b7e0007ccb635/colorLogoPNG_1777492822828.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-63c6e37e636b7e0007ccb635.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:51:48.862Z",
-      "latencyMs": 4422,
-      "score": 85,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-PlutoTVHandboldLive.se@DK-274",
-      "sourceId": "PlutoTVHandboldLive.se@DK",
-      "name": "Pluto TV Håndbold Live",
-      "logo": "https://images.pluto.tv/channels/6618f54baec96800081525ec/colorLogoPNG_1762173655031.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-6618f54baec96800081525ec.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:51:52.164Z",
-      "latencyMs": 6148,
-      "score": 85,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-PlutoTVSnooker900.us@CA-285",
-      "sourceId": "PlutoTVSnooker900.us@CA",
-      "name": "Pluto TV Snooker 900",
-      "logo": "https://images.pluto.tv/channels/639b4f75d3d35c0007d37b30/colorLogoPNG_1759333260607.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-639b4f75d3d35c0007d37b30.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:52:05.528Z",
-      "latencyMs": 7003,
-      "score": 85,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-PlutoTVSnooker900.de@DACH-277",
-      "sourceId": "PlutoTVSnooker900.de@DACH",
-      "name": "Pluto TV Snooker 900 (720p)",
-      "logo": "https://images.pluto.tv/channels/68ac5543a1ac0c90f2c8943e/colorLogoPNG_1760517341343.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-68ac5543a1ac0c90f2c8943e.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:51:53.747Z",
-      "latencyMs": 5464,
-      "score": 85,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-PlutoTVSnooker900.de@ES-278",
-      "sourceId": "PlutoTVSnooker900.de@ES",
-      "name": "Pluto TV Snooker 900 (720p)",
-      "logo": "https://images.pluto.tv/channels/68ac5543a1ac0c90f2c8943e/colorLogoPNG_1760517341343.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-69148c470155f9b136b5d856.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:51:53.731Z",
-      "latencyMs": 4869,
-      "score": 85,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-PlutoTVSnooker900.de@FR-279",
-      "sourceId": "PlutoTVSnooker900.de@FR",
-      "name": "Pluto TV Snooker 900 (720p)",
-      "logo": "https://images.pluto.tv/channels/68ac5543a1ac0c90f2c8943e/colorLogoPNG_1760517341343.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-66fd35e44ca31f0008060b77.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:51:58.523Z",
-      "latencyMs": 6374,
-      "score": 85,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-PlutoTVSnooker900.de@GB-280",
-      "sourceId": "PlutoTVSnooker900.de@GB",
-      "name": "Pluto TV Snooker 900 (720p)",
-      "logo": "https://images.pluto.tv/channels/68ac5543a1ac0c90f2c8943e/colorLogoPNG_1760517341343.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-655b7cbb2c46f300086f0afa.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:51:58.810Z",
-      "latencyMs": 6644,
-      "score": 85,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-PlutoTVSnooker900.de@IT-281",
-      "sourceId": "PlutoTVSnooker900.de@IT",
-      "name": "Pluto TV Snooker 900 (720p)",
-      "logo": "https://images.pluto.tv/channels/68ac5543a1ac0c90f2c8943e/colorLogoPNG_1760517341343.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-69148c76e9dec35c9269a16c.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:51:58.686Z",
-      "latencyMs": 6272,
-      "score": 85,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-PlutoTVSnooker900.se@DK-282",
-      "sourceId": "PlutoTVSnooker900.se@DK",
-      "name": "Pluto TV Snooker 900 (720p)",
-      "logo": "https://images.pluto.tv/channels/68ac5543a1ac0c90f2c8943e/colorLogoPNG_1760517341343.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-68ac55bb3efb41cd979a65ec.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:52:00.053Z",
-      "latencyMs": 6322,
-      "score": 85,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-PlutoTVSnooker900.se@NO-283",
-      "sourceId": "PlutoTVSnooker900.se@NO",
-      "name": "Pluto TV Snooker 900 (720p)",
-      "logo": "https://images.pluto.tv/channels/68ac5543a1ac0c90f2c8943e/colorLogoPNG_1760517341343.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-68ac55fe3efb41cd979a6877.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:52:00.039Z",
-      "latencyMs": 6290,
-      "score": 85,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-PlutoTVSnooker900.se@SE-284",
-      "sourceId": "PlutoTVSnooker900.se@SE",
-      "name": "Pluto TV Snooker 900 (720p)",
-      "logo": "https://images.pluto.tv/channels/68ac5543a1ac0c90f2c8943e/colorLogoPNG_1760517341343.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-68ac56363efb41cd979a8005.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:52:02.682Z",
-      "latencyMs": 6646,
-      "score": 85,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-PlutoTVSport.se@SE-289",
-      "sourceId": "PlutoTVSport.se@SE",
-      "name": "Pluto TV Sport",
-      "logo": "https://images.pluto.tv/channels/6357f3de3643ba0007bc0b50/colorLogoPNG_1746816938506.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-62cd74e38f6f0d000798cd93.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:52:04.997Z",
-      "latencyMs": 4944,
+      "checkedAt": "2026-07-16T19:27:10.161Z",
+      "latencyMs": 8659,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -2389,8 +1714,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:52:12.810Z",
-      "latencyMs": 3448,
+      "checkedAt": "2026-07-16T19:27:27.889Z",
+      "latencyMs": 4828,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -2416,8 +1741,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:52:36.522Z",
-      "latencyMs": 7676,
+      "checkedAt": "2026-07-16T19:27:53.268Z",
+      "latencyMs": 7294,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -2443,8 +1768,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:52:36.747Z",
-      "latencyMs": 7801,
+      "checkedAt": "2026-07-16T19:27:53.412Z",
+      "latencyMs": 7217,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -2470,8 +1795,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:52:39.320Z",
-      "latencyMs": 7595,
+      "checkedAt": "2026-07-16T19:27:52.942Z",
+      "latencyMs": 6296,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -2497,35 +1822,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:52:38.080Z",
-      "latencyMs": 4767,
-      "score": 85,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-Stadium.us@SD-372",
-      "sourceId": "Stadium.us@SD",
-      "name": "Stadium (720p)",
-      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Stadium_%28sports_network%29_logo.svg/960px-Stadium_%28sports_network%29_logo.svg.png",
-      "source": "iptv-org",
-      "streamUrl": "https://wurl120sports.global.transmit.live/hls/679a907dce42a042c23ace37/v1/stadium_gracenote/samsung_us/latest/main/hls/playlist.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:52:57.287Z",
-      "latencyMs": 3057,
+      "checkedAt": "2026-07-16T19:27:52.084Z",
+      "latencyMs": 4479,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -2551,8 +1849,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:02.916Z",
-      "latencyMs": 3971,
+      "checkedAt": "2026-07-16T19:28:18.950Z",
+      "latencyMs": 4847,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -2578,8 +1876,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:04.403Z",
-      "latencyMs": 3745,
+      "checkedAt": "2026-07-16T19:28:19.677Z",
+      "latencyMs": 4917,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -2605,8 +1903,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:05.879Z",
-      "latencyMs": 3927,
+      "checkedAt": "2026-07-16T19:28:20.916Z",
+      "latencyMs": 4350,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -2632,8 +1930,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:22.356Z",
-      "latencyMs": 3118,
+      "checkedAt": "2026-07-16T19:28:37.983Z",
+      "latencyMs": 3103,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -2659,8 +1957,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:39.090Z",
-      "latencyMs": 2378,
+      "checkedAt": "2026-07-16T19:28:57.032Z",
+      "latencyMs": 4858,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -2686,8 +1984,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:41.571Z",
-      "latencyMs": 2480,
+      "checkedAt": "2026-07-16T19:28:58.139Z",
+      "latencyMs": 2887,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -2713,8 +2011,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:42.792Z",
-      "latencyMs": 3351,
+      "checkedAt": "2026-07-16T19:28:59.472Z",
+      "latencyMs": 2438,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -2740,8 +2038,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:42.639Z",
-      "latencyMs": 3113,
+      "checkedAt": "2026-07-16T19:29:00.096Z",
+      "latencyMs": 2871,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -2767,8 +2065,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:43.654Z",
-      "latencyMs": 2290,
+      "checkedAt": "2026-07-16T19:29:00.050Z",
+      "latencyMs": 2371,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -2794,35 +2092,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:49.879Z",
-      "latencyMs": 5205,
-      "score": 85,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-XFCTV.us@SD-457",
-      "sourceId": "XFCTV.us@SD",
-      "name": "XFC TV (720p)",
-      "logo": "https://i.imgur.com/LcfzmG0.png",
-      "source": "iptv-org",
-      "streamUrl": "https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=2247",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:54:03.829Z",
-      "latencyMs": 8576,
+      "checkedAt": "2026-07-16T19:29:06.167Z",
+      "latencyMs": 4400,
       "score": 85,
       "probe": {
         "hasVideo": true,
@@ -2848,8 +2119,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:48:52.539Z",
-      "latencyMs": 1726,
+      "checkedAt": "2026-07-16T19:24:25.038Z",
+      "latencyMs": 1664,
       "score": 80,
       "probe": {
         "hasVideo": true,
@@ -2866,168 +2137,6 @@
       }
     },
     {
-      "id": "iptvorg-BrondbyTV.se@DK-85",
-      "sourceId": "BrondbyTV.se@DK",
-      "name": "Brøndby TV",
-      "logo": "https://images.pluto.tv/channels/685029cda1e091e16ff57fc8/colorLogoPNG_1750246109707.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-685029cda1e091e16ff57fc8.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:49:05.187Z",
-      "latencyMs": 5821,
-      "score": 80,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1216,
-        "maxHeight": 684,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-DAZNCombat.uk@SD-106",
-      "sourceId": "DAZNCombat.uk@SD",
-      "name": "DAZN Combat (684p)",
-      "logo": "https://i.postimg.cc/VsW3Jsrz/logo-DAZN-Combat.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-64d626ac9b414d000820e2fc.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:49:17.830Z",
-      "latencyMs": 4099,
-      "score": 80,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1216,
-        "maxHeight": 684,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-DAZNHeldinnenxPlutoTV.de@DACH-109",
-      "sourceId": "DAZNHeldinnenxPlutoTV.de@DACH",
-      "name": "DAZN Heldinnen x Pluto TV",
-      "logo": "https://images.pluto.tv/channels/64afe50c5dc16600087f3227/colorLogoPNG.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-64afe50c5dc16600087f3227.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:49:19.751Z",
-      "latencyMs": 4234,
-      "score": 80,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1216,
-        "maxHeight": 684,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-FIFAPlus.uk@English-143",
-      "sourceId": "FIFAPlus.uk@English",
-      "name": "FIFA+ (720p)",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/FIFA%2B_(2025).svg/960px-FIFA%2B_(2025).svg.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-660c29b5aec9680008f5b4a4.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:49:47.781Z",
-      "latencyMs": 4642,
-      "score": 80,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1216,
-        "maxHeight": 684,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-FTFSports.us@SD-165",
-      "sourceId": "FTFSports.us@SD",
-      "name": "FTF Sports (720p)",
-      "logo": "https://i.imgur.com/yvUjOI3.png",
-      "source": "iptv-org",
-      "streamUrl": "https://1593604785.rsc.cdn77.org/FTF/FTF_SCTE.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:50:20.297Z",
-      "latencyMs": 11459,
-      "score": 80,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1920,
-        "maxHeight": 1080,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-HTSporTV.tr@SD-188",
-      "sourceId": "HTSporTV.tr@SD",
-      "name": "HTSpor TV (1080p)",
-      "logo": "https://www.htspor.com/images/manifest/social-share-logo.png",
-      "source": "iptv-org",
-      "streamUrl": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:50:38.601Z",
-      "latencyMs": 10682,
-      "score": 80,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1920,
-        "maxHeight": 1080,
-        "audioChannels": 2
-      }
-    },
-    {
       "id": "iptvorg-KozoomTV.fr@SD-198",
       "sourceId": "KozoomTV.fr@SD",
       "name": "Kozoom TV (1080p)",
@@ -3037,8 +2146,35 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:50:49.026Z",
-      "latencyMs": 10997,
+      "checkedAt": "2026-07-16T19:26:12.313Z",
+      "latencyMs": 11318,
+      "score": 80,
+      "probe": {
+        "hasVideo": true,
+        "hasAudio": true,
+        "videoCodecs": [
+          "h264"
+        ],
+        "audioCodecs": [
+          "aac"
+        ],
+        "maxWidth": 1920,
+        "maxHeight": 1080,
+        "audioChannels": 2
+      }
+    },
+    {
+      "id": "iptvorg-MMATVcom.ru@SD-228",
+      "sourceId": "MMATVcom.ru@SD",
+      "name": "MMA TV.com (1080p)",
+      "logo": "https://i.imgur.com/QhdxNsB.png",
+      "source": "iptv-org",
+      "streamUrl": "https://streams2.sofast.tv/vglive-sk-462904/playlist.m3u8",
+      "description": "Sports · Public stream indexed by iptv-org",
+      "verified": true,
+      "priority": false,
+      "checkedAt": "2026-07-16T19:26:37.789Z",
+      "latencyMs": 9857,
       "score": 80,
       "probe": {
         "hasVideo": true,
@@ -3064,8 +2200,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:51:16.528Z",
-      "latencyMs": 9246,
+      "checkedAt": "2026-07-16T19:26:42.359Z",
+      "latencyMs": 10787,
       "score": 80,
       "probe": {
         "hasVideo": true,
@@ -3091,8 +2227,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:51:32.377Z",
-      "latencyMs": 1396,
+      "checkedAt": "2026-07-16T19:27:00.373Z",
+      "latencyMs": 1628,
       "score": 80,
       "probe": {
         "hasVideo": true,
@@ -3109,168 +2245,6 @@
       }
     },
     {
-      "id": "iptvorg-PlutoTVDeportes.us@LatAm-268",
-      "sourceId": "PlutoTVDeportes.us@LatAm",
-      "name": "Pluto TV Deportes",
-      "logo": "https://images.pluto.tv/channels/5dcde07af1c85b0009b18651/colorLogoPNG_1766080575034.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-5dcde07af1c85b0009b18651.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:51:46.054Z",
-      "latencyMs": 5714,
-      "score": 80,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1216,
-        "maxHeight": 684,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-PlutoTVHandboldHighlights.se@DK-273",
-      "sourceId": "PlutoTVHandboldHighlights.se@DK",
-      "name": "Pluto TV Håndbold Highlights",
-      "logo": "https://images.pluto.tv/channels/68dfa431cc3c6cd904053100/colorLogoPNG_1761838112979.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-68dfa431cc3c6cd904053100.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:51:52.414Z",
-      "latencyMs": 7090,
-      "score": 80,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1024,
-        "maxHeight": 576,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-PlutoTVHandbollLive.se@SE-276",
-      "sourceId": "PlutoTVHandbollLive.se@SE",
-      "name": "Pluto TV Handboll Live",
-      "logo": "https://images.pluto.tv/channels/686faf533ffa5e0c912688e7/colorLogoPNG_1762169254016.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-686faf533ffa5e0c912688e7.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:51:52.149Z",
-      "latencyMs": 4998,
-      "score": 80,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1216,
-        "maxHeight": 684,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-PlutoTVSport.de@IT-286",
-      "sourceId": "PlutoTVSport.de@IT",
-      "name": "Pluto TV Sport",
-      "logo": "https://images.pluto.tv/channels/608030eff4b6f70007e1684c/colorLogoPNG_1746816937164.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-608030eff4b6f70007e1684c.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:52:03.287Z",
-      "latencyMs": 4600,
-      "score": 80,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1216,
-        "maxHeight": 684,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-PlutoTVSport.se@DK-287",
-      "sourceId": "PlutoTVSport.se@DK",
-      "name": "Pluto TV Sport",
-      "logo": "https://images.pluto.tv/channels/6357f3de3643ba0007bc0b50/colorLogoPNG_1746816938506.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-6357f3de3643ba0007bc0b50.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:52:04.123Z",
-      "latencyMs": 5312,
-      "score": 80,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1216,
-        "maxHeight": 684,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-PlutoTVSport.se@NO-288",
-      "sourceId": "PlutoTVSport.se@NO",
-      "name": "Pluto TV Sport",
-      "logo": "https://images.pluto.tv/channels/6357f3de3643ba0007bc0b50/colorLogoPNG_1746816938506.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-6357f33cb51d2d00077927c6.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:52:04.892Z",
-      "latencyMs": 4853,
-      "score": 80,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1216,
-        "maxHeight": 684,
-        "audioChannels": 2
-      }
-    },
-    {
       "id": "iptvorg-QazSport.kz@SD-306",
       "sourceId": "QazSport.kz@SD",
       "name": "QazSport (480p) [Geo-blocked]",
@@ -3280,8 +2254,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:52:09.362Z",
-      "latencyMs": 3282,
+      "checkedAt": "2026-07-16T19:27:23.055Z",
+      "latencyMs": 6543,
       "score": 80,
       "probe": {
         "hasVideo": true,
@@ -3298,152 +2272,17 @@
       }
     },
     {
-      "id": "iptvorg-RealMadridTV.es@SD-315",
-      "sourceId": "RealMadridTV.es@SD",
-      "name": "Realmadrid TV (720p)",
-      "logo": "https://i.imgur.com/5pMo7dL.png",
+      "id": "iptvorg-Stadium.us@SD-372",
+      "sourceId": "Stadium.us@SD",
+      "name": "Stadium (720p)",
+      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Stadium_%28sports_network%29_logo.svg/960px-Stadium_%28sports_network%29_logo.svg.png",
       "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-63dac28760bc8f0008a7654b.m3u8",
+      "streamUrl": "https://wurl120sports.global.transmit.live/hls/679a907dce42a042c23ace37/v1/stadium_gracenote/samsung_us/latest/main/hls/playlist.m3u8",
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:52:13.527Z",
-      "latencyMs": 3780,
-      "score": 80,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1216,
-        "maxHeight": 684,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-talkSPORT.uk@SD-388",
-      "sourceId": "talkSPORT.uk@SD",
-      "name": "talkSPORT (1080p)",
-      "logo": "https://upload.wikimedia.org/wikipedia/en/9/9d/Talksport_logo.png",
-      "source": "iptv-org",
-      "streamUrl": "https://af7a8b4e.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfdGFsa1NQT1JUX0hMUw/playlist.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:53:15.831Z",
-      "latencyMs": 9951,
-      "score": 80,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1920,
-        "maxHeight": 1080,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-TennisChannel.us@Plus2-395",
-      "sourceId": "TennisChannel.us@Plus2",
-      "name": "TennisChannel 2 (720p)",
-      "logo": "https://i.imgur.com/tsljAnY.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-681109b688b9d85d0938c6ba.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:53:17.686Z",
-      "latencyMs": 5234,
-      "score": 80,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1216,
-        "maxHeight": 684,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-TJKTV.tr@SD-403",
-      "sourceId": "TJKTV.tr@SD",
-      "name": "TJK TV (1080p)",
-      "logo": "https://i.imgur.com/3zHdkYG.png",
-      "source": "iptv-org",
-      "streamUrl": "https://tjktv-live.tjk.org/tjktv.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:53:28.626Z",
-      "latencyMs": 10383,
-      "score": 80,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1920,
-        "maxHeight": 1080,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-TraceSportStars.fr@Russia-409",
-      "sourceId": "TraceSportStars.fr@Russia",
-      "name": "Trace Sport Stars Russia (720p)",
-      "logo": "https://i.imgur.com/FabFP5A.png",
-      "source": "iptv-org",
-      "streamUrl": "https://stream8.cinerama.uz/1274/tracks-v1a1/mono.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:53:24.074Z",
-      "latencyMs": 3829,
-      "score": 80,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1024,
-        "maxHeight": 576,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-TraceSportStars.fr@SD-410",
-      "sourceId": "TraceSportStars.fr@SD",
-      "name": "Trace Sport Stars SD",
-      "logo": "https://i.imgur.com/FabFP5A.png",
-      "source": "iptv-org",
-      "streamUrl": "https://channels.trace.plus/Traceprod/TRACE_SPORT_STARS_sd/index.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:53:27.559Z",
-      "latencyMs": 6241,
+      "checkedAt": "2026-07-16T19:28:12.416Z",
+      "latencyMs": 3802,
       "score": 80,
       "probe": {
         "hasVideo": true,
@@ -3460,17 +2299,17 @@
       }
     },
     {
-      "id": "iptvorg-vijuPlusSport.ru@SD-444",
-      "sourceId": "vijuPlusSport.ru@SD",
-      "name": "viju+ Sport",
-      "logo": "https://i.imgur.com/fXESG0l.png",
+      "id": "iptvorg-SwerveSports.us@SD-383",
+      "sourceId": "SwerveSports.us@SD",
+      "name": "Swerve Combat (1080p)",
+      "logo": "https://i.imgur.com/GT0Yi2T.png",
       "source": "iptv-org",
-      "streamUrl": "https://stream8.cinerama.uz/1229/tracks-v1a1/mono.m3u8",
+      "streamUrl": "https://linear-253.frequency.stream/mt/roku/253/hls/master/playlist.m3u8",
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:48.925Z",
-      "latencyMs": 4290,
+      "checkedAt": "2026-07-16T19:28:28.158Z",
+      "latencyMs": 10382,
       "score": 80,
       "probe": {
         "hasVideo": true,
@@ -3481,9 +2320,63 @@
         "audioCodecs": [
           "aac"
         ],
-        "maxWidth": 1024,
-        "maxHeight": 576,
-        "audioChannels": 1
+        "maxWidth": 1920,
+        "maxHeight": 1080,
+        "audioChannels": 2
+      }
+    },
+    {
+      "id": "iptvorg-TJKTV.tr@SD-403",
+      "sourceId": "TJKTV.tr@SD",
+      "name": "TJK TV (1080p)",
+      "logo": "https://i.imgur.com/3zHdkYG.png",
+      "source": "iptv-org",
+      "streamUrl": "https://tjktv-live.tjk.org/tjktv.m3u8",
+      "description": "Sports · Public stream indexed by iptv-org",
+      "verified": true,
+      "priority": false,
+      "checkedAt": "2026-07-16T19:28:45.374Z",
+      "latencyMs": 11643,
+      "score": 80,
+      "probe": {
+        "hasVideo": true,
+        "hasAudio": true,
+        "videoCodecs": [
+          "h264"
+        ],
+        "audioCodecs": [
+          "aac"
+        ],
+        "maxWidth": 1920,
+        "maxHeight": 1080,
+        "audioChannels": 2
+      }
+    },
+    {
+      "id": "iptvorg-TraceSportStars.fr@SD-410",
+      "sourceId": "TraceSportStars.fr@SD",
+      "name": "Trace Sport Stars SD",
+      "logo": "https://i.imgur.com/FabFP5A.png",
+      "source": "iptv-org",
+      "streamUrl": "https://channels.trace.plus/Traceprod/TRACE_SPORT_STARS_sd/index.m3u8",
+      "description": "Sports · Public stream indexed by iptv-org",
+      "verified": true,
+      "priority": false,
+      "checkedAt": "2026-07-16T19:28:42.479Z",
+      "latencyMs": 5586,
+      "score": 80,
+      "probe": {
+        "hasVideo": true,
+        "hasAudio": true,
+        "videoCodecs": [
+          "h264"
+        ],
+        "audioCodecs": [
+          "aac"
+        ],
+        "maxWidth": 960,
+        "maxHeight": 540,
+        "audioChannels": 2
       }
     },
     {
@@ -3496,8 +2389,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:15.010Z",
-      "latencyMs": 1608,
+      "checkedAt": "2026-07-16T19:24:48.108Z",
+      "latencyMs": 1548,
       "score": 75,
       "probe": {
         "hasVideo": true,
@@ -3523,89 +2416,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:45.332Z",
-      "latencyMs": 3063,
-      "score": 75,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-FIFAPlus.uk@Portuguese-148",
-      "sourceId": "FIFAPlus.uk@Portuguese",
-      "name": "FIFA+ Portuguese (720p)",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/FIFA%2B_(2025).svg/960px-FIFA%2B_(2025).svg.png",
-      "source": "iptv-org",
-      "streamUrl": "https://e3be9ac5.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctYnJfRklGQVBsdXNQb3J0dWd1ZXNlX0hMUw/playlist.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:50:01.343Z",
-      "latencyMs": 11813,
-      "score": 75,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-FIFAPlus.uk@Spain-149",
-      "sourceId": "FIFAPlus.uk@Spain",
-      "name": "FIFA+ Spain (720p)",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/FIFA%2B_(2025).svg/960px-FIFA%2B_(2025).svg.png",
-      "source": "iptv-org",
-      "streamUrl": "https://d63fabad.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWVzX0ZJRkFQbHVzU3BhbmlzaF9ITFM/playlist.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:49:59.895Z",
-      "latencyMs": 10181,
-      "score": 75,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-FIFAPlusWomen.uk@English-151",
-      "sourceId": "FIFAPlusWomen.uk@English",
-      "name": "FIFA+ Women (720p)",
-      "logo": "https://i.imgur.com/xy9ZxVO.png",
-      "source": "iptv-org",
-      "streamUrl": "https://cffda8ff.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9GSUZBUGx1c3dvbWVuX0hMUw/playlist.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:50:01.139Z",
-      "latencyMs": 9594,
+      "checkedAt": "2026-07-16T19:25:21.558Z",
+      "latencyMs": 3506,
       "score": 75,
       "probe": {
         "hasVideo": true,
@@ -3631,8 +2443,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:52:43.283Z",
-      "latencyMs": 1563,
+      "checkedAt": "2026-07-16T19:27:59.030Z",
+      "latencyMs": 1586,
       "score": 75,
       "probe": {
         "hasVideo": true,
@@ -3658,8 +2470,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:52:44.722Z",
-      "latencyMs": 1457,
+      "checkedAt": "2026-07-16T19:28:00.316Z",
+      "latencyMs": 1729,
       "score": 75,
       "probe": {
         "hasVideo": true,
@@ -3685,8 +2497,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:52:48.395Z",
-      "latencyMs": 4128,
+      "checkedAt": "2026-07-16T19:28:01.714Z",
+      "latencyMs": 1485,
       "score": 75,
       "probe": {
         "hasVideo": true,
@@ -3712,8 +2524,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:52:47.651Z",
-      "latencyMs": 2927,
+      "checkedAt": "2026-07-16T19:28:02.373Z",
+      "latencyMs": 2056,
       "score": 75,
       "probe": {
         "hasVideo": true,
@@ -3739,8 +2551,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:52:49.713Z",
-      "latencyMs": 2280,
+      "checkedAt": "2026-07-16T19:28:03.150Z",
+      "latencyMs": 2198,
       "score": 75,
       "probe": {
         "hasVideo": true,
@@ -3766,8 +2578,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:06.292Z",
-      "latencyMs": 1888,
+      "checkedAt": "2026-07-16T19:28:21.399Z",
+      "latencyMs": 2442,
       "score": 75,
       "probe": {
         "hasVideo": true,
@@ -3793,8 +2605,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:17.726Z",
-      "latencyMs": 9851,
+      "checkedAt": "2026-07-16T19:28:36.991Z",
+      "latencyMs": 11504,
       "score": 75,
       "probe": {
         "hasVideo": true,
@@ -3820,8 +2632,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:39.523Z",
-      "latencyMs": 10896,
+      "checkedAt": "2026-07-16T19:28:57.224Z",
+      "latencyMs": 11849,
       "score": 75,
       "probe": {
         "hasVideo": true,
@@ -3847,8 +2659,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:39.866Z",
-      "latencyMs": 2527,
+      "checkedAt": "2026-07-16T19:28:57.677Z",
+      "latencyMs": 4376,
       "score": 75,
       "probe": {
         "hasVideo": true,
@@ -3874,8 +2686,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:42.261Z",
-      "latencyMs": 2393,
+      "checkedAt": "2026-07-16T19:28:59.697Z",
+      "latencyMs": 2381,
       "score": 75,
       "probe": {
         "hasVideo": true,
@@ -3892,60 +2704,6 @@
       }
     },
     {
-      "id": "pluto-pluto-tv-comedy",
-      "sourceId": "pluto-tv-comedy",
-      "name": "Pluto TV Comedy",
-      "logo": "http://images.pluto.tv/channels/5a4d3a00ad95e4718ae8d8db/colorLogoPNG_1731836724642.png",
-      "source": "pluto",
-      "streamUrl": "https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5a4d3a00ad95e4718ae8d8db/master.m3u8?advertisingId=&appName=web&appVersion=5.0.0&app_name=web&clientDeviceType=0&clientID=korndog-1784227725646-gvf4yk5r&clientModelNumber=1.0&country=US&deviceDNT=false&deviceId=korndog-1784227725646-gvf4yk5r&deviceLat=37.2400&deviceLon=-85.5100&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=1&marketingRegion=US&serverSideAds=false&sessionID=f988a9f4-8146-11f1-ad10-da660559fd3a&sid=f988a9f4-8146-11f1-ad10-da660559fd3a&userId=",
-      "description": "Pluto TV Comedy on Pluto TV",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:48:56.004Z",
-      "latencyMs": 9609,
-      "score": 70,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1216,
-        "maxHeight": 684,
-        "audioChannels": 2
-      }
-    },
-    {
-      "id": "iptvorg-PlutoTVHandbollHighlights.se@SE-275",
-      "sourceId": "PlutoTVHandbollHighlights.se@SE",
-      "name": "Pluto TV Handboll Highlights",
-      "logo": "https://images.pluto.tv/channels/68dfa3e2cc3c6cd904052c41/colorLogoPNG_1761838923264.png",
-      "source": "iptv-org",
-      "streamUrl": "https://jmp2.uk/plu-68dfa3e2cc3c6cd904052c41.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:51:56.035Z",
-      "latencyMs": 9981,
-      "score": 70,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1216,
-        "maxHeight": 684,
-        "audioChannels": 2
-      }
-    },
-    {
       "id": "iptvorg-SportTVPlus.pt@SD-353",
       "sourceId": "SportTVPlus.pt@SD",
       "name": "Sport TV+",
@@ -3955,8 +2713,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:52:49.209Z",
-      "latencyMs": 1558,
+      "checkedAt": "2026-07-16T19:28:03.391Z",
+      "latencyMs": 1675,
       "score": 65,
       "probe": {
         "hasVideo": true,
@@ -3973,6 +2731,60 @@
       }
     },
     {
+      "id": "iptvorg-SuperTennis.it@SD-382",
+      "sourceId": "SuperTennis.it@SD",
+      "name": "SuperTennis (1080p)",
+      "logo": "https://upload.wikimedia.org/wikipedia/it/thumb/6/6a/SuperTennis_-_Logo_2016.svg/960px-SuperTennis_-_Logo_2016.svg.png",
+      "source": "iptv-org",
+      "streamUrl": "https://live-embed.supertennix.hiway.media/restreamer/supertennix_client/gpu-a-c0-16/restreamer/outgest/aa3673f1-e178-44a9-a947-ef41db73211a/manifest.m3u8",
+      "description": "Sports · Public stream indexed by iptv-org",
+      "verified": true,
+      "priority": false,
+      "checkedAt": "2026-07-16T19:28:26.968Z",
+      "latencyMs": 9237,
+      "score": 65,
+      "probe": {
+        "hasVideo": true,
+        "hasAudio": true,
+        "videoCodecs": [
+          "h264"
+        ],
+        "audioCodecs": [
+          "aac"
+        ],
+        "maxWidth": 0,
+        "maxHeight": 0,
+        "audioChannels": 2
+      }
+    },
+    {
+      "id": "iptvorg-CablenetSports1.cy@SD-86",
+      "sourceId": "CablenetSports1.cy@SD",
+      "name": "Cablenet Sports 1 (1080p)",
+      "logo": "https://i.imgur.com/kcaF4jb.png",
+      "source": "iptv-org",
+      "streamUrl": "http://185.102.171.218/CablenetSports1/index.m3u8",
+      "description": "Sports · Public stream indexed by iptv-org",
+      "verified": true,
+      "priority": false,
+      "checkedAt": "2026-07-16T19:24:38.832Z",
+      "latencyMs": 7151,
+      "score": 50,
+      "probe": {
+        "hasVideo": true,
+        "hasAudio": true,
+        "videoCodecs": [
+          "h264"
+        ],
+        "audioCodecs": [
+          "aac"
+        ],
+        "maxWidth": 1920,
+        "maxHeight": 1080,
+        "audioChannels": 2
+      }
+    },
+    {
       "id": "iptvorg-CCTVBilliards.cn@HD-95",
       "sourceId": "CCTVBilliards.cn@HD",
       "name": "CCTV-Billiards (1080p)",
@@ -3982,8 +2794,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:06.932Z",
-      "latencyMs": 1364,
+      "checkedAt": "2026-07-16T19:24:42.356Z",
+      "latencyMs": 1159,
       "score": 50,
       "probe": {
         "hasVideo": true,
@@ -4009,8 +2821,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:07.905Z",
-      "latencyMs": 1148,
+      "checkedAt": "2026-07-16T19:24:42.893Z",
+      "latencyMs": 1353,
       "score": 50,
       "probe": {
         "hasVideo": true,
@@ -4036,8 +2848,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:08.005Z",
-      "latencyMs": 1073,
+      "checkedAt": "2026-07-16T19:24:43.944Z",
+      "latencyMs": 1587,
       "score": 50,
       "probe": {
         "hasVideo": true,
@@ -4063,8 +2875,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:31.090Z",
-      "latencyMs": 2130,
+      "checkedAt": "2026-07-16T19:25:05.507Z",
+      "latencyMs": 3086,
       "score": 50,
       "probe": {
         "hasVideo": true,
@@ -4090,8 +2902,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:31.056Z",
-      "latencyMs": 1970,
+      "checkedAt": "2026-07-16T19:25:05.716Z",
+      "latencyMs": 2940,
       "score": 50,
       "probe": {
         "hasVideo": true,
@@ -4117,8 +2929,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:32.102Z",
-      "latencyMs": 2014,
+      "checkedAt": "2026-07-16T19:25:07.491Z",
+      "latencyMs": 1982,
       "score": 50,
       "probe": {
         "hasVideo": true,
@@ -4144,8 +2956,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:37.793Z",
-      "latencyMs": 6702,
+      "checkedAt": "2026-07-16T19:25:12.390Z",
+      "latencyMs": 4897,
       "score": 50,
       "probe": {
         "hasVideo": true,
@@ -4171,8 +2983,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:50:10.304Z",
-      "latencyMs": 3745,
+      "checkedAt": "2026-07-16T19:25:39.830Z",
+      "latencyMs": 2414,
       "score": 50,
       "probe": {
         "hasVideo": true,
@@ -4198,8 +3010,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:50:54.572Z",
-      "latencyMs": 5211,
+      "checkedAt": "2026-07-16T19:26:21.259Z",
+      "latencyMs": 7928,
       "score": 50,
       "probe": {
         "hasVideo": true,
@@ -4225,8 +3037,35 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:51:17.097Z",
-      "latencyMs": 5171,
+      "checkedAt": "2026-07-16T19:26:38.588Z",
+      "latencyMs": 5956,
+      "score": 50,
+      "probe": {
+        "hasVideo": true,
+        "hasAudio": true,
+        "videoCodecs": [
+          "h264"
+        ],
+        "audioCodecs": [
+          "aac"
+        ],
+        "maxWidth": 1920,
+        "maxHeight": 1080,
+        "audioChannels": 2
+      }
+    },
+    {
+      "id": "iptvorg-MSGPlus.us@SD-237",
+      "sourceId": "MSGPlus.us@SD",
+      "name": "MSG Plus (720p)",
+      "logo": "https://i.imgur.com/7suDpSK.png",
+      "source": "iptv-org",
+      "streamUrl": "http://40.160.24.52/MSG_PLUS/index.m3u8",
+      "description": "Sports · Public stream indexed by iptv-org",
+      "verified": true,
+      "priority": false,
+      "checkedAt": "2026-07-16T19:26:43.011Z",
+      "latencyMs": 6202,
       "score": 50,
       "probe": {
         "hasVideo": true,
@@ -4252,8 +3091,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:51:24.522Z",
-      "latencyMs": 7148,
+      "checkedAt": "2026-07-16T19:26:49.417Z",
+      "latencyMs": 8506,
       "score": 50,
       "probe": {
         "hasVideo": true,
@@ -4279,8 +3118,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:52:55.522Z",
-      "latencyMs": 5938,
+      "checkedAt": "2026-07-16T19:28:08.754Z",
+      "latencyMs": 5214,
       "score": 50,
       "probe": {
         "hasVideo": true,
@@ -4297,17 +3136,44 @@
       }
     },
     {
-      "id": "iptvorg-TSN1.ca@SD-413",
-      "sourceId": "TSN1.ca@SD",
-      "name": "TSN1 (1080p)",
-      "logo": "https://i.imgur.com/eRFE0jZ.png",
+      "id": "iptvorg-TSN2.ca@SD-414",
+      "sourceId": "TSN2.ca@SD",
+      "name": "TSN2 (1080p)",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/TSN2.svg/960px-TSN2.svg.png",
       "source": "iptv-org",
-      "streamUrl": "http://40.160.24.55/TSN_1/index.m3u8",
+      "streamUrl": "http://40.160.24.55/TSN_2/index.m3u8",
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:24.573Z",
-      "latencyMs": 2166,
+      "checkedAt": "2026-07-16T19:28:43.756Z",
+      "latencyMs": 4674,
+      "score": 50,
+      "probe": {
+        "hasVideo": true,
+        "hasAudio": true,
+        "videoCodecs": [
+          "h264"
+        ],
+        "audioCodecs": [
+          "aac"
+        ],
+        "maxWidth": 1920,
+        "maxHeight": 1080,
+        "audioChannels": 2
+      }
+    },
+    {
+      "id": "iptvorg-TSN4.ca@SD-416",
+      "sourceId": "TSN4.ca@SD",
+      "name": "TSN4 (1080p)",
+      "logo": "https://i.imgur.com/qJyAWU8.png",
+      "source": "iptv-org",
+      "streamUrl": "http://40.160.24.55/TSN_4/index.m3u8",
+      "description": "Sports · Public stream indexed by iptv-org",
+      "verified": true,
+      "priority": false,
+      "checkedAt": "2026-07-16T19:28:51.495Z",
+      "latencyMs": 8641,
       "score": 50,
       "probe": {
         "hasVideo": true,
@@ -4333,8 +3199,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:41.361Z",
-      "latencyMs": 4711,
+      "checkedAt": "2026-07-16T19:28:57.315Z",
+      "latencyMs": 5818,
       "score": 50,
       "probe": {
         "hasVideo": true,
@@ -4360,8 +3226,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:44.409Z",
-      "latencyMs": 2837,
+      "checkedAt": "2026-07-16T19:29:01.335Z",
+      "latencyMs": 3195,
       "score": 50,
       "probe": {
         "hasVideo": true,
@@ -4387,8 +3253,8 @@
       "description": "Comedy;Movies;Series;Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:43.704Z",
-      "latencyMs": 1063,
+      "checkedAt": "2026-07-16T19:29:03.164Z",
+      "latencyMs": 3690,
       "score": 50,
       "probe": {
         "hasVideo": true,
@@ -4414,8 +3280,8 @@
       "description": "Comedy;Movies;Series;Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:46.906Z",
-      "latencyMs": 4111,
+      "checkedAt": "2026-07-16T19:29:07.320Z",
+      "latencyMs": 7623,
       "score": 50,
       "probe": {
         "hasVideo": true,
@@ -4432,33 +3298,6 @@
       }
     },
     {
-      "id": "iptvorg-beINSportsUSA.us@SD-78",
-      "sourceId": "beINSportsUSA.us@SD",
-      "name": "beIN Sports USA (720p)",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png",
-      "source": "iptv-org",
-      "streamUrl": "http://23.237.104.106:8080/USA_BEIN/index.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:48:59.647Z",
-      "latencyMs": 7089,
-      "score": 45,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
-        "audioChannels": 2
-      }
-    },
-    {
       "id": "iptvorg-CBSSportsNetworkUSA.us@SD-93",
       "sourceId": "CBSSportsNetworkUSA.us@SD",
       "name": "CBS Sports Network USA (720p)",
@@ -4468,8 +3307,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:13.730Z",
-      "latencyMs": 8853,
+      "checkedAt": "2026-07-16T19:24:42.656Z",
+      "latencyMs": 2736,
       "score": 45,
       "probe": {
         "hasVideo": true,
@@ -4495,8 +3334,8 @@
       "description": "News;Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:39.603Z",
-      "latencyMs": 7924,
+      "checkedAt": "2026-07-16T19:25:13.326Z",
+      "latencyMs": 4784,
       "score": 45,
       "probe": {
         "hasVideo": true,
@@ -4522,8 +3361,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:39.566Z",
-      "latencyMs": 7463,
+      "checkedAt": "2026-07-16T19:25:15.808Z",
+      "latencyMs": 6834,
       "score": 45,
       "probe": {
         "hasVideo": true,
@@ -4549,8 +3388,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:43.138Z",
-      "latencyMs": 3716,
+      "checkedAt": "2026-07-16T19:25:19.840Z",
+      "latencyMs": 6513,
       "score": 45,
       "probe": {
         "hasVideo": true,
@@ -4576,8 +3415,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:45.941Z",
-      "latencyMs": 6374,
+      "checkedAt": "2026-07-16T19:25:18.047Z",
+      "latencyMs": 4609,
       "score": 45,
       "probe": {
         "hasVideo": true,
@@ -4603,8 +3442,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:50:08.896Z",
-      "latencyMs": 4567,
+      "checkedAt": "2026-07-16T19:25:41.451Z",
+      "latencyMs": 5461,
       "score": 45,
       "probe": {
         "hasVideo": true,
@@ -4630,8 +3469,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:50:26.709Z",
-      "latencyMs": 4834,
+      "checkedAt": "2026-07-16T19:25:53.979Z",
+      "latencyMs": 4643,
       "score": 45,
       "probe": {
         "hasVideo": true,
@@ -4657,8 +3496,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:51:06.241Z",
-      "latencyMs": 4225,
+      "checkedAt": "2026-07-16T19:26:30.867Z",
+      "latencyMs": 5258,
       "score": 45,
       "probe": {
         "hasVideo": true,
@@ -4684,8 +3523,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:51:07.281Z",
-      "latencyMs": 5111,
+      "checkedAt": "2026-07-16T19:26:32.128Z",
+      "latencyMs": 6390,
       "score": 45,
       "probe": {
         "hasVideo": true,
@@ -4711,8 +3550,35 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:51:14.419Z",
-      "latencyMs": 2286,
+      "checkedAt": "2026-07-16T19:26:36.809Z",
+      "latencyMs": 2647,
+      "score": 45,
+      "probe": {
+        "hasVideo": true,
+        "hasAudio": true,
+        "videoCodecs": [
+          "h264"
+        ],
+        "audioCodecs": [
+          "aac"
+        ],
+        "maxWidth": 1280,
+        "maxHeight": 720,
+        "audioChannels": 2
+      }
+    },
+    {
+      "id": "iptvorg-NBCSN.us@SD-247",
+      "sourceId": "NBCSN.us@SD",
+      "name": "NBCSN (720p)",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/NBCSN_logo_%28flat%29.svg/960px-NBCSN_logo_%28flat%29.svg.png",
+      "source": "iptv-org",
+      "streamUrl": "http://40.160.24.58/NBC_SPORTS_NETWORK/index.m3u8",
+      "description": "Sports · Public stream indexed by iptv-org",
+      "verified": true,
+      "priority": false,
+      "checkedAt": "2026-07-16T19:26:46.714Z",
+      "latencyMs": 4355,
       "score": 45,
       "probe": {
         "hasVideo": true,
@@ -4738,8 +3604,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:52:08.798Z",
-      "latencyMs": 3800,
+      "checkedAt": "2026-07-16T19:27:22.243Z",
+      "latencyMs": 8337,
       "score": 45,
       "probe": {
         "hasVideo": true,
@@ -4765,8 +3631,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:19.947Z",
-      "latencyMs": 2220,
+      "checkedAt": "2026-07-16T19:28:35.871Z",
+      "latencyMs": 2382,
       "score": 45,
       "probe": {
         "hasVideo": true,
@@ -4783,6 +3649,60 @@
       }
     },
     {
+      "id": "iptvorg-TSN3.ca@SD-415",
+      "sourceId": "TSN3.ca@SD",
+      "name": "TSN3 (1080p)",
+      "logo": "https://i.imgur.com/AYza8KO.png",
+      "source": "iptv-org",
+      "streamUrl": "http://40.160.24.55/TSN_3/index.m3u8",
+      "description": "Sports · Public stream indexed by iptv-org",
+      "verified": true,
+      "priority": false,
+      "checkedAt": "2026-07-16T19:28:50.291Z",
+      "latencyMs": 7808,
+      "score": 45,
+      "probe": {
+        "hasVideo": true,
+        "hasAudio": true,
+        "videoCodecs": [
+          "h264"
+        ],
+        "audioCodecs": [
+          "aac"
+        ],
+        "maxWidth": 1280,
+        "maxHeight": 720,
+        "audioChannels": 2
+      }
+    },
+    {
+      "id": "iptvorg-DigiSport1.ro@HD-113",
+      "sourceId": "DigiSport1.ro@HD",
+      "name": "Digi Sport 1 HD",
+      "logo": "https://i.imgur.com/5zMxDYq.png",
+      "source": "iptv-org",
+      "streamUrl": "http://91.201.172.14:35005",
+      "description": "Sports · Public stream indexed by iptv-org",
+      "verified": true,
+      "priority": false,
+      "checkedAt": "2026-07-16T19:24:53.212Z",
+      "latencyMs": 2955,
+      "score": 40,
+      "probe": {
+        "hasVideo": true,
+        "hasAudio": true,
+        "videoCodecs": [
+          "h264"
+        ],
+        "audioCodecs": [
+          "mp2"
+        ],
+        "maxWidth": 1920,
+        "maxHeight": 1080,
+        "audioChannels": 2
+      }
+    },
+    {
       "id": "iptvorg-DongNaiTV2.vn@SD-117",
       "sourceId": "DongNaiTV2.vn@SD",
       "name": "Đồng Nai 2 (480p) [Not 24/7]",
@@ -4792,8 +3712,8 @@
       "description": "Entertainment;Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:28.152Z",
-      "latencyMs": 5932,
+      "checkedAt": "2026-07-16T19:25:00.290Z",
+      "latencyMs": 6336,
       "score": 40,
       "probe": {
         "hasVideo": true,
@@ -4819,8 +3739,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:50:04.049Z",
-      "latencyMs": 2706,
+      "checkedAt": "2026-07-16T19:25:36.509Z",
+      "latencyMs": 4289,
       "score": 40,
       "probe": {
         "hasVideo": true,
@@ -4846,8 +3766,35 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:50:18.809Z",
-      "latencyMs": 2433,
+      "checkedAt": "2026-07-16T19:25:47.421Z",
+      "latencyMs": 1600,
+      "score": 40,
+      "probe": {
+        "hasVideo": true,
+        "hasAudio": true,
+        "videoCodecs": [
+          "h264"
+        ],
+        "audioCodecs": [
+          "aac"
+        ],
+        "maxWidth": 544,
+        "maxHeight": 480,
+        "audioChannels": 2
+      }
+    },
+    {
+      "id": "iptvorg-GolfChannelLatinAmerica.us@SD-184",
+      "sourceId": "GolfChannelLatinAmerica.us@SD",
+      "name": "Golf Channel Latin America (1080p)",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Golf_Channel_Logo_2018.png/960px-Golf_Channel_Logo_2018.png",
+      "source": "iptv-org",
+      "streamUrl": "http://72.1.184.5:8089/play/a0cw/index.m3u8",
+      "description": "Sports · Public stream indexed by iptv-org",
+      "verified": true,
+      "priority": false,
+      "checkedAt": "2026-07-16T19:25:55.323Z",
+      "latencyMs": 3659,
       "score": 40,
       "probe": {
         "hasVideo": true,
@@ -4873,8 +3820,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:50:28.775Z",
-      "latencyMs": 2064,
+      "checkedAt": "2026-07-16T19:25:56.982Z",
+      "latencyMs": 3001,
       "score": 40,
       "probe": {
         "hasVideo": true,
@@ -4891,17 +3838,17 @@
       }
     },
     {
-      "id": "iptvorg-MSGPlus.us@SD-237",
-      "sourceId": "MSGPlus.us@SD",
-      "name": "MSG Plus (720p)",
-      "logo": "https://i.imgur.com/7suDpSK.png",
+      "id": "iptvorg-NFLNetwork.us@SD-250",
+      "sourceId": "NFLNetwork.us@SD",
+      "name": "NFL Network (720p)",
+      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/NFL_Network_logo.svg/960px-NFL_Network_logo.svg.png",
       "source": "iptv-org",
-      "streamUrl": "http://40.160.24.52/MSG_PLUS/index.m3u8",
+      "streamUrl": "http://23.237.104.106:8080/USA_NFL_NETWORK/index.m3u8",
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:51:24.924Z",
-      "latencyMs": 10886,
+      "checkedAt": "2026-07-16T19:26:54.692Z",
+      "latencyMs": 9047,
       "score": 40,
       "probe": {
         "hasVideo": true,
@@ -4918,17 +3865,45 @@
       }
     },
     {
-      "id": "iptvorg-NFLNetwork.us@SD-250",
-      "sourceId": "NFLNetwork.us@SD",
-      "name": "NFL Network (720p)",
-      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/NFL_Network_logo.svg/960px-NFL_Network_logo.svg.png",
+      "id": "iptvorg-StarSports1.in@HD-374",
+      "sourceId": "StarSports1.in@HD",
+      "name": "Star Sports 1 HD (1080p)",
+      "logo": "https://i.imgur.com/E5jjKHI.png",
       "source": "iptv-org",
-      "streamUrl": "http://23.237.104.106:8080/USA_NFL_NETWORK/index.m3u8",
+      "streamUrl": "http://103.253.18.58:8000/play/a00m",
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:51:32.817Z",
-      "latencyMs": 10402,
+      "checkedAt": "2026-07-16T19:28:17.775Z",
+      "latencyMs": 8687,
+      "score": 40,
+      "probe": {
+        "hasVideo": true,
+        "hasAudio": true,
+        "videoCodecs": [
+          "h264"
+        ],
+        "audioCodecs": [
+          "eac3",
+          "mp2"
+        ],
+        "maxWidth": 1920,
+        "maxHeight": 1080,
+        "audioChannels": 6
+      }
+    },
+    {
+      "id": "iptvorg-TSN1.ca@SD-413",
+      "sourceId": "TSN1.ca@SD",
+      "name": "TSN1 (1080p)",
+      "logo": "https://i.imgur.com/eRFE0jZ.png",
+      "source": "iptv-org",
+      "streamUrl": "http://40.160.24.55/TSN_1/index.m3u8",
+      "description": "Sports · Public stream indexed by iptv-org",
+      "verified": true,
+      "priority": false,
+      "checkedAt": "2026-07-16T19:28:47.273Z",
+      "latencyMs": 9288,
       "score": 40,
       "probe": {
         "hasVideo": true,
@@ -4954,8 +3929,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:36.542Z",
-      "latencyMs": 9853,
+      "checkedAt": "2026-07-16T19:28:53.299Z",
+      "latencyMs": 9541,
       "score": 40,
       "probe": {
         "hasVideo": true,
@@ -4972,6 +3947,33 @@
       }
     },
     {
+      "id": "iptvorg-beINSportsUSA.us@SD-78",
+      "sourceId": "beINSportsUSA.us@SD",
+      "name": "beIN Sports USA (720p)",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png",
+      "source": "iptv-org",
+      "streamUrl": "http://23.237.104.106:8080/USA_BEIN/index.m3u8",
+      "description": "Sports · Public stream indexed by iptv-org",
+      "verified": true,
+      "priority": false,
+      "checkedAt": "2026-07-16T19:24:37.052Z",
+      "latencyMs": 11373,
+      "score": 35,
+      "probe": {
+        "hasVideo": true,
+        "hasAudio": true,
+        "videoCodecs": [
+          "h264"
+        ],
+        "audioCodecs": [
+          "aac"
+        ],
+        "maxWidth": 1280,
+        "maxHeight": 720,
+        "audioChannels": 2
+      }
+    },
+    {
       "id": "iptvorg-SPOTV.id@SD-369",
       "sourceId": "SPOTV.id@SD",
       "name": "SPOTV (720p)",
@@ -4981,8 +3983,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:52:55.801Z",
-      "latencyMs": 4432,
+      "checkedAt": "2026-07-16T19:28:09.087Z",
+      "latencyMs": 3168,
       "score": 35,
       "probe": {
         "hasVideo": true,
@@ -5008,8 +4010,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:52:55.374Z",
-      "latencyMs": 3136,
+      "checkedAt": "2026-07-16T19:28:09.913Z",
+      "latencyMs": 3148,
       "score": 35,
       "probe": {
         "hasVideo": true,
@@ -5026,33 +4028,6 @@
       }
     },
     {
-      "id": "iptvorg-TSN3.ca@SD-415",
-      "sourceId": "TSN3.ca@SD",
-      "name": "TSN3 (1080p)",
-      "logo": "https://i.imgur.com/AYza8KO.png",
-      "source": "iptv-org",
-      "streamUrl": "http://40.160.24.55/TSN_3/index.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:53:33.629Z",
-      "latencyMs": 9550,
-      "score": 35,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 1280,
-        "maxHeight": 720,
-        "audioChannels": 2
-      }
-    },
-    {
       "id": "iptvorg-WinSports.co@SD-450",
       "sourceId": "WinSports.co@SD",
       "name": "Win Sports (1080p)",
@@ -5062,8 +4037,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:48.526Z",
-      "latencyMs": 1619,
+      "checkedAt": "2026-07-16T19:29:09.523Z",
+      "latencyMs": 3593,
       "score": 35,
       "probe": {
         "hasVideo": true,
@@ -5080,6 +4055,33 @@
       }
     },
     {
+      "id": "iptvorg-MaxSport4.bg@SD-222",
+      "sourceId": "MaxSport4.bg@SD",
+      "name": "Max Sport 4",
+      "logo": "https://i.imgur.com/7IxXX6f.png",
+      "source": "iptv-org",
+      "streamUrl": "http://213.91.179.28:8000/play/a05n",
+      "description": "Sports · Public stream indexed by iptv-org",
+      "verified": true,
+      "priority": false,
+      "checkedAt": "2026-07-16T19:26:31.571Z",
+      "latencyMs": 10311,
+      "score": 30,
+      "probe": {
+        "hasVideo": true,
+        "hasAudio": true,
+        "videoCodecs": [
+          "h264"
+        ],
+        "audioCodecs": [
+          "mp2"
+        ],
+        "maxWidth": 1920,
+        "maxHeight": 1080,
+        "audioChannels": 2
+      }
+    },
+    {
       "id": "iptvorg-MeridianoTV.ve@SD-224",
       "sourceId": "MeridianoTV.ve@SD",
       "name": "Meridiano TV (576p)",
@@ -5089,8 +4091,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:50:59.316Z",
-      "latencyMs": 2114,
+      "checkedAt": "2026-07-16T19:26:24.035Z",
+      "latencyMs": 1565,
       "score": 30,
       "probe": {
         "hasVideo": true,
@@ -5116,8 +4118,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:51:35.808Z",
-      "latencyMs": 5677,
+      "checkedAt": "2026-07-16T19:27:03.642Z",
+      "latencyMs": 8949,
       "score": 30,
       "probe": {
         "hasVideo": true,
@@ -5134,34 +4136,6 @@
       }
     },
     {
-      "id": "iptvorg-StarSports1.in@HD-374",
-      "sourceId": "StarSports1.in@HD",
-      "name": "Star Sports 1 HD (1080p)",
-      "logo": "https://i.imgur.com/E5jjKHI.png",
-      "source": "iptv-org",
-      "streamUrl": "http://103.253.18.58:8000/play/a00m",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:53:06.948Z",
-      "latencyMs": 11425,
-      "score": 30,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "eac3",
-          "mp2"
-        ],
-        "maxWidth": 1920,
-        "maxHeight": 1080,
-        "audioChannels": 6
-      }
-    },
-    {
       "id": "iptvorg-StarSports1Hindi.in@SD-375",
       "sourceId": "StarSports1Hindi.in@SD",
       "name": "Star Sports 1 Hindi (576p)",
@@ -5171,8 +4145,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:03.194Z",
-      "latencyMs": 7392,
+      "checkedAt": "2026-07-16T19:28:16.565Z",
+      "latencyMs": 7356,
       "score": 30,
       "probe": {
         "hasVideo": true,
@@ -5198,8 +4172,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:53:01.950Z",
-      "latencyMs": 5629,
+      "checkedAt": "2026-07-16T19:28:17.730Z",
+      "latencyMs": 7816,
       "score": 30,
       "probe": {
         "hasVideo": true,
@@ -5216,17 +4190,17 @@
       }
     },
     {
-      "id": "iptvorg-DigiSport1.ro@HD-113",
-      "sourceId": "DigiSport1.ro@HD",
-      "name": "Digi Sport 1 HD",
-      "logo": "https://i.imgur.com/5zMxDYq.png",
+      "id": "iptvorg-DigiSport2.ro@HD-114",
+      "sourceId": "DigiSport2.ro@HD",
+      "name": "Digi Sport 2 HD",
+      "logo": "https://i.imgur.com/KWDUi3v.png",
       "source": "iptv-org",
-      "streamUrl": "http://91.201.172.14:35005",
+      "streamUrl": "http://91.201.172.14:35006",
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:21.741Z",
-      "latencyMs": 1990,
+      "checkedAt": "2026-07-16T19:24:53.908Z",
+      "latencyMs": 1991,
       "score": 25,
       "probe": {
         "hasVideo": true,
@@ -5243,60 +4217,6 @@
       }
     },
     {
-      "id": "iptvorg-DigiSport2.ro@HD-114",
-      "sourceId": "DigiSport2.ro@HD",
-      "name": "Digi Sport 2 HD",
-      "logo": "https://i.imgur.com/KWDUi3v.png",
-      "source": "iptv-org",
-      "streamUrl": "http://91.201.172.14:35006",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:49:22.220Z",
-      "latencyMs": 1977,
-      "score": 25,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "mp3"
-        ],
-        "maxWidth": 0,
-        "maxHeight": 0,
-        "audioChannels": 0
-      }
-    },
-    {
-      "id": "iptvorg-NWSport2.tg@SD-254",
-      "sourceId": "NWSport2.tg@SD",
-      "name": "NW Sport 2 (1080p)",
-      "logo": null,
-      "source": "iptv-org",
-      "streamUrl": "http://41.205.70.146/M6/index.m3u8",
-      "description": "Sports · Public stream indexed by iptv-org",
-      "verified": true,
-      "priority": false,
-      "checkedAt": "2026-07-16T18:51:38.027Z",
-      "latencyMs": 11273,
-      "score": 25,
-      "probe": {
-        "hasVideo": true,
-        "hasAudio": true,
-        "videoCodecs": [
-          "h264"
-        ],
-        "audioCodecs": [
-          "aac"
-        ],
-        "maxWidth": 0,
-        "maxHeight": 0,
-        "audioChannels": 2
-      }
-    },
-    {
       "id": "iptvorg-ExtremeSportsChannel.ru@SD-136",
       "sourceId": "ExtremeSportsChannel.ru@SD",
       "name": "Extreme Sports Channel (576p)",
@@ -5306,8 +4226,8 @@
       "description": "Sports · Public stream indexed by iptv-org",
       "verified": true,
       "priority": false,
-      "checkedAt": "2026-07-16T18:49:49.713Z",
-      "latencyMs": 11919,
+      "checkedAt": "2026-07-16T19:25:24.322Z",
+      "latencyMs": 11930,
       "score": 20,
       "probe": {
         "hasVideo": true,
