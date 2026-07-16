@@ -129,8 +129,19 @@
   async function init() {
     const manifest = await fetch(`${ORIGIN}/manifest.json`).then(r => r.json());
     renderTabs(manifest.catalogs);
-    if (manifest.catalogs.length > 0) {
-      loadCatalog(manifest.catalogs[0].id, manifest.catalogs[0].name);
+
+    // If the page was opened with ?cat=some-id, jump straight to that
+    // catalog instead of always defaulting to the first one - this is
+    // what lets the landing page's category cards deep-link here.
+    const params = new URLSearchParams(window.location.search);
+    const requestedCat = params.get('cat');
+    const target = manifest.catalogs.find(c => c.id === requestedCat) || manifest.catalogs[0];
+
+    if (target) {
+      document.querySelectorAll('.tab').forEach(t => {
+        t.classList.toggle('active', t.dataset.catId === target.id);
+      });
+      loadCatalog(target.id, target.name);
     }
   }
 
@@ -139,6 +150,7 @@
     catalogs.forEach((cat, i) => {
       const btn = document.createElement('button');
       btn.className = 'tab' + (i === 0 ? ' active' : '');
+      btn.dataset.catId = cat.id;
       btn.textContent = cat.name;
       btn.onclick = () => {
         document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
