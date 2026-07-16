@@ -130,9 +130,6 @@
     const manifest = await fetch(`${ORIGIN}/manifest.json`).then(r => r.json());
     renderTabs(manifest.catalogs);
 
-    // If the page was opened with ?cat=some-id, jump straight to that
-    // catalog instead of always defaulting to the first one - this is
-    // what lets the landing page's category cards deep-link here.
     const params = new URLSearchParams(window.location.search);
     const requestedCat = params.get('cat');
     const target = manifest.catalogs.find(c => c.id === requestedCat) || manifest.catalogs[0];
@@ -210,22 +207,48 @@
 
     if (video.canPlayType('application/vnd.apple.mpegurl')) {
       video.src = stream.url;
+      video.play().catch(() => {});
     } else if (window.Hls && Hls.isSupported()) {
-      currentHls = new Hls();
+      currentHls = new Hls({
+        // Plex's proxied playlists can be slower to stabilize than direct
+        // Pluto streams - give hls.js more patience before giving up, and
+        // let it auto-recover from the kind of transient network/parsing
+        // errors that were likely causing the black screen.
+        manifestLoadingTimeOut: 15000,
+        manifestLoadingMaxRetry: 4,
+        levelLoadingTimeOut: 15000
+      });
+
+      currentHls.on(Hls.Events.ERROR, (event, data) => {
+        console.error('[hls.js error]', data.type, data.details, data.fatal);
+        if (data.fatal) {
+          switch (data.type) {
+            case Hls.ErrorTypes.NETWORK_ERROR:
+              currentHls.startLoad(); // retry loading
+              break;
+            case Hls.ErrorTypes.MEDIA_ERROR:
+              currentHls.recoverMediaError(); // retry decoding
+              break;
+            default:
+              document.getElementById('player-desc').textContent =
+                'Stream failed to load. Try again or pick another channel.';
+              break;
+          }
+        }
+      });
+
+      currentHls.on(Hls.Events.MANIFEST_PARSED, () => {
+        video.play().catch(() => {});
+      });
+
       currentHls.loadSource(stream.url);
       currentHls.attachMedia(video);
     }
 
-    await video.play().catch(() => {});
-
-    // Request fullscreen on the video element itself (not the whole page) -
-    // on mobile this is what triggers the browser/OS to auto-rotate into
-    // landscape and give a proper edge-to-edge fullscreen video, instead of
-    // the boxed-in portrait view.
     if (video.requestFullscreen) {
       video.requestFullscreen().catch(() => {});
     } else if (video.webkitEnterFullscreen) {
-      video.webkitEnterFullscreen(); // iOS Safari's native video fullscreen
+      video.webkitEnterFullscreen();
     }
   }
 
