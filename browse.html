@@ -129,8 +129,24 @@
   async function init() {
     const manifest = await fetch(`${ORIGIN}/manifest.json`).then(r => r.json());
     renderTabs(manifest.catalogs);
-    if (manifest.catalogs.length > 0) {
-      loadCatalog(manifest.catalogs[0].id, manifest.catalogs[0].name);
+
+    const params = new URLSearchParams(window.location.search);
+    const requestedCat = params.get('cat');
+    const target = manifest.catalogs.find(c => c.id === requestedCat) || manifest.catalogs[0];
+
+    if (target) {
+      document.querySelectorAll('.tab').forEach(t => {
+        t.classList.toggle('active', t.dataset.catId === target.id);
+      });
+      loadCatalog(target.id, target.name);
+
+      // Scroll the tab strip so the active tab is actually visible, instead
+      // of landing on Concert Corner while the tab bar still shows sports
+      // tabs scrolled off to the left.
+      const activeTabEl = document.querySelector(`.tab[data-cat-id="${target.id}"]`);
+      if (activeTabEl) {
+        activeTabEl.scrollIntoView({ behavior: 'instant', inline: 'center', block: 'nearest' });
+      }
     }
   }
 
@@ -139,6 +155,7 @@
     catalogs.forEach((cat, i) => {
       const btn = document.createElement('button');
       btn.className = 'tab' + (i === 0 ? ' active' : '');
+      btn.dataset.catId = cat.id;
       btn.textContent = cat.name;
       btn.onclick = () => {
         document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
@@ -178,16 +195,11 @@
     const stream = (data.streams || [])[0];
     if (!stream) return;
 
-    // Concert Corner items use externalUrl pointing at watch.html - just
-    // navigate there directly, it already handles single/multi-track playback.
     if (stream.externalUrl) {
       window.location.href = stream.externalUrl;
       return;
     }
 
-    // Sports channels are HLS (.m3u8) - play in-page using hls.js for
-    // Chrome/Firefox/Edge, or natively for Safari (which supports HLS
-    // built-in and doesn't need hls.js at all).
     catalogView.style.display = 'none';
     playerView.classList.add('show');
     backBtn.classList.add('show');
@@ -198,22 +210,44 @@
 
     if (video.canPlayType('application/vnd.apple.mpegurl')) {
       video.src = stream.url;
+      video.play().catch(() => {});
     } else if (window.Hls && Hls.isSupported()) {
-      currentHls = new Hls();
+      currentHls = new Hls({
+        manifestLoadingTimeOut: 15000,
+        manifestLoadingMaxRetry: 4,
+        levelLoadingTimeOut: 15000
+      });
+
+      currentHls.on(Hls.Events.ERROR, (event, data) => {
+        console.error('[hls.js error]', data.type, data.details, data.fatal);
+        if (data.fatal) {
+          switch (data.type) {
+            case Hls.ErrorTypes.NETWORK_ERROR:
+              currentHls.startLoad();
+              break;
+            case Hls.ErrorTypes.MEDIA_ERROR:
+              currentHls.recoverMediaError();
+              break;
+            default:
+              document.getElementById('player-desc').textContent =
+                'Stream failed to load. Try again or pick another channel.';
+              break;
+          }
+        }
+      });
+
+      currentHls.on(Hls.Events.MANIFEST_PARSED, () => {
+        video.play().catch(() => {});
+      });
+
       currentHls.loadSource(stream.url);
       currentHls.attachMedia(video);
     }
 
-    await video.play().catch(() => {});
-
-    // Request fullscreen on the video element itself (not the whole page) -
-    // on mobile this is what triggers the browser/OS to auto-rotate into
-    // landscape and give a proper edge-to-edge fullscreen video, instead of
-    // the boxed-in portrait view.
     if (video.requestFullscreen) {
       video.requestFullscreen().catch(() => {});
     } else if (video.webkitEnterFullscreen) {
-      video.webkitEnterFullscreen(); // iOS Safari's native video fullscreen
+      video.webkitEnterFullscreen();
     }
   }
 
