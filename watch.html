@@ -84,6 +84,9 @@
   const titles = (params.get('titles') || '').split(',').map(t => decodeURIComponent(t));
   const sessionName = decodeURIComponent(params.get('session') || 'KornDog Concert Corner');
 
+  // Unique key for saving/resuming progress - stored in this browser's
+  // localStorage only, so resume works when you come back on the SAME
+  // device/browser, not across different devices.
   const progressId = `concert:${ids.join(',')}`;
 
   let currentIndex = 0;
@@ -121,11 +124,12 @@
     resetFade(controlsEl, 6000);
   }
 
-  async function fetchSavedProgress() {
+  // --- Progress tracking (resume on same device) ---
+
+  function fetchSavedProgress() {
     try {
-      const res = await fetch(`/.netlify/functions/progress?id=${encodeURIComponent(progressId)}`);
-      const data = await res.json();
-      return data.progress;
+      const raw = localStorage.getItem(progressId);
+      return raw ? JSON.parse(raw) : null;
     } catch {
       return null;
     }
@@ -134,26 +138,30 @@
   function saveProgress() {
     if (!player || typeof player.getCurrentTime !== 'function') return;
     const position = player.getCurrentTime();
-    fetch('/.netlify/functions/progress', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id: progressId, position, trackIndex: currentIndex })
-    }).catch(() => {});
+    try {
+      localStorage.setItem(progressId, JSON.stringify({
+        position,
+        trackIndex: currentIndex,
+        updatedAt: new Date().toISOString()
+      }));
+    } catch {}
   }
 
-  async function onYouTubeIframeAPIReady() {
+  // --- YouTube player setup ---
+
+  function onYouTubeIframeAPIReady() {
     if (ids.length === 0) {
       nowPlayingEl.textContent = 'No videos specified.';
       return;
     }
 
-    const saved = await fetchSavedProgress();
+    const saved = fetchSavedProgress();
     let startIndex = 0;
     let startSeconds = 0;
 
     if (saved && typeof saved.trackIndex === 'number' && saved.trackIndex < ids.length) {
       startIndex = saved.trackIndex;
-      startSeconds = Math.max(0, Math.floor(saved.position || 0) - 3);
+      startSeconds = Math.max(0, Math.floor(saved.position || 0) - 3); // rewind a few seconds for context
     }
 
     currentIndex = startIndex;
@@ -218,6 +226,8 @@
       playPauseBtn.textContent = '▶';
     }
   }
+
+  // --- Custom control bar wiring ---
 
   playPauseBtn.addEventListener('click', () => {
     if (!player) return;
