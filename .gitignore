@@ -3,3 +3,4 @@
 data/experimental/
 scripts/experimental/
 lib/sources.js.before-plex
+node_modules/
