@@ -8,6 +8,7 @@
     "verify": "node scripts/verify-channels.js"
   },
   "dependencies": {
+    "@netlify/blobs": "^10.7.9",
     "node-fetch": "^2.7.0",
     "stremio-addon-sdk": "^1.6.10"
   }
