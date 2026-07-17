@@ -8,6 +8,7 @@
   html, body { margin: 0; padding: 0; background: #0a0512; height: 100%; overflow: hidden; }
   #player-wrap { position: fixed; inset: 0; }
   #player { width: 100%; height: 100%; }
+  #click-catcher { position: fixed; inset: 0; z-index: 5; }
 
   #now-playing {
     position: fixed; bottom: 78px; left: 14px; z-index: 10;
@@ -62,6 +63,7 @@
 <body>
 
 <div id="player-wrap"><div id="player"></div></div>
+<div id="click-catcher"></div>
 <div id="now-playing"></div>
 <button id="unmute-btn">▶ Tap to Start with Sound</button>
 
@@ -84,9 +86,6 @@
   const titles = (params.get('titles') || '').split(',').map(t => decodeURIComponent(t));
   const sessionName = decodeURIComponent(params.get('session') || 'KornDog Concert Corner');
 
-  // Unique key for saving/resuming progress - stored in this browser's
-  // localStorage only, so resume works when you come back on the SAME
-  // device/browser, not across different devices.
   const progressId = `concert:${ids.join(',')}`;
 
   let currentIndex = 0;
@@ -124,8 +123,6 @@
     resetFade(controlsEl, 6000);
   }
 
-  // --- Progress tracking (resume on same device) ---
-
   function fetchSavedProgress() {
     try {
       const raw = localStorage.getItem(progressId);
@@ -147,8 +144,6 @@
     } catch {}
   }
 
-  // --- YouTube player setup ---
-
   function onYouTubeIframeAPIReady() {
     if (ids.length === 0) {
       nowPlayingEl.textContent = 'No videos specified.';
@@ -161,7 +156,7 @@
 
     if (saved && typeof saved.trackIndex === 'number' && saved.trackIndex < ids.length) {
       startIndex = saved.trackIndex;
-      startSeconds = Math.max(0, Math.floor(saved.position || 0) - 3); // rewind a few seconds for context
+      startSeconds = Math.max(0, Math.floor(saved.position || 0) - 3);
     }
 
     currentIndex = startIndex;
@@ -207,6 +202,26 @@
     }, 1000);
 
     progressSaveTimer = setInterval(saveProgress, 5000);
+
+    setupMediaSession();
+  }
+
+  function setupMediaSession() {
+    if (!('mediaSession' in navigator)) return;
+
+    navigator.mediaSession.metadata = new MediaMetadata({
+      title: sessionName,
+      artist: 'KornDog Concert Corner'
+    });
+
+    navigator.mediaSession.setActionHandler('play', () => player.playVideo());
+    navigator.mediaSession.setActionHandler('pause', () => player.pauseVideo());
+    navigator.mediaSession.setActionHandler('seekbackward', () => {
+      player.seekTo(Math.max(0, player.getCurrentTime() - 15), true);
+    });
+    navigator.mediaSession.setActionHandler('seekforward', () => {
+      player.seekTo(player.getCurrentTime() + 15, true);
+    });
   }
 
   function onPlayerStateChange(event) {
@@ -226,8 +241,6 @@
       playPauseBtn.textContent = '▶';
     }
   }
-
-  // --- Custom control bar wiring ---
 
   playPauseBtn.addEventListener('click', () => {
     if (!player) return;
@@ -259,7 +272,7 @@
     resetFade(controlsEl, 6000);
   });
 
-  document.body.addEventListener('click', () => {
+  document.getElementById('click-catcher').addEventListener('click', () => {
     resetFade(controlsEl, 6000);
     resetFade(nowPlayingEl, 8000);
   });
