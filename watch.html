@@ -8,27 +8,55 @@
   html, body { margin: 0; padding: 0; background: #0a0512; height: 100%; overflow: hidden; }
   #player-wrap { position: fixed; inset: 0; }
   #player { width: 100%; height: 100%; }
+
   #now-playing {
-    position: fixed; bottom: 14px; left: 14px; z-index: 10;
+    position: fixed; bottom: 78px; left: 14px; z-index: 10;
     color: #c4ff42; font-family: -apple-system, sans-serif; font-size: 14px;
     background: rgba(10,5,18,.7); padding: 6px 12px; border-radius: 8px;
-    pointer-events: none;
-    opacity: 1;
-    transition: opacity 0.6s ease;
+    pointer-events: none; opacity: 1; transition: opacity 0.6s ease;
   }
-  #now-playing.faded {
-    opacity: 0;
-  }
+  #now-playing.faded { opacity: 0; }
+
   #unmute-btn {
     position: fixed; top: 14px; right: 14px; z-index: 20;
     background: #9cff18; color: #0a0512; border: none; border-radius: 10px;
     font-family: -apple-system, sans-serif; font-weight: 700; font-size: 18px;
     padding: 14px 22px; cursor: pointer;
   }
-  #unmute-btn:focus {
-    outline: 4px solid #fff; outline-offset: 2px;
-  }
+  #unmute-btn:focus { outline: 4px solid #fff; outline-offset: 2px; }
   #unmute-btn.hidden { display: none; }
+
+  #controls {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 15;
+    background: linear-gradient(0deg, rgba(10,5,18,.92), transparent);
+    padding: 20px 16px 14px;
+    opacity: 1; transition: opacity 0.6s ease;
+  }
+  #controls.faded { opacity: 0; }
+  #seek-row {
+    display: flex; align-items: center; gap: 10px; margin-bottom: 10px;
+  }
+  #seek-bar {
+    flex: 1; height: 5px; -webkit-appearance: none; appearance: none;
+    background: rgba(255,255,255,.25); border-radius: 4px; outline: none;
+  }
+  #seek-bar::-webkit-slider-thumb {
+    -webkit-appearance: none; width: 16px; height: 16px; border-radius: 50%;
+    background: #9cff18; cursor: pointer;
+  }
+  #time-label {
+    color: #e9e0f4; font-family: -apple-system, sans-serif; font-size: 12px;
+    min-width: 92px; text-align: right;
+  }
+  #btn-row { display: flex; align-items: center; justify-content: center; gap: 22px; }
+  .ctrl-btn {
+    background: rgba(156,255,24,.12); border: 1.5px solid rgba(156,255,24,.4);
+    color: #c4ff42; border-radius: 50%; width: 48px; height: 48px;
+    font-size: 20px; display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+  }
+  .ctrl-btn:focus { outline: 3px solid #fff; }
+  #play-pause-btn { width: 58px; height: 58px; font-size: 24px; background: #9cff18; color: #0a0512; border: none; }
 </style>
 </head>
 <body>
@@ -37,64 +65,104 @@
 <div id="now-playing"></div>
 <button id="unmute-btn">▶ Tap to Start with Sound</button>
 
+<div id="controls">
+  <div id="seek-row">
+    <input type="range" id="seek-bar" min="0" max="100" value="0">
+    <span id="time-label">0:00 / 0:00</span>
+  </div>
+  <div id="btn-row">
+    <button class="ctrl-btn" id="rewind-btn" aria-label="Rewind 15 seconds">⏪</button>
+    <button class="ctrl-btn" id="play-pause-btn" aria-label="Play/Pause">▶</button>
+    <button class="ctrl-btn" id="forward-btn" aria-label="Forward 15 seconds">⏩</button>
+  </div>
+</div>
+
 <script src="https://www.youtube.com/iframe_api"></script>
 <script>
-  // Reads ?ids=VIDEOID1,VIDEOID2,...&titles=Title%20One,Title%20Two,...
-  // from the URL, queues them, and auto-advances through the whole set.
-  //
-  // TV-remote fix: browsers block autoplay-with-sound unless the user has
-  // already interacted with the page, and a TV remote's D-pad can't click
-  // into YouTube's own play-button overlay (it lives inside a cross-origin
-  // iframe). So we start muted (which autoplay IS allowed to do), and show
-  // our own real on-page button - outside the iframe, fully focusable by a
-  // TV remote - that unmutes and confirms playback with one press.
-  //
-  // That same tap also requests fullscreen, which is what hides Chrome's
-  // address bar (top) on Android/Google TV - browsers require it to fire
-  // inside a real user gesture like this click.
   const params = new URLSearchParams(window.location.search);
   const ids = (params.get('ids') || '').split(',').filter(Boolean);
   const titles = (params.get('titles') || '').split(',').map(t => decodeURIComponent(t));
   const sessionName = decodeURIComponent(params.get('session') || 'KornDog Concert Corner');
 
+  const progressId = `concert:${ids.join(',')}`;
+
   let currentIndex = 0;
   let player;
-  let fadeTimer;
+  let progressSaveTimer;
+  let seekBarDragging = false;
+
+  const nowPlayingEl = document.getElementById('now-playing');
+  const controlsEl = document.getElementById('controls');
+  const seekBar = document.getElementById('seek-bar');
+  const timeLabel = document.getElementById('time-label');
+  const playPauseBtn = document.getElementById('play-pause-btn');
+
+  function formatTime(sec) {
+    if (!isFinite(sec) || sec < 0) sec = 0;
+    const m = Math.floor(sec / 60);
+    const s = Math.floor(sec % 60).toString().padStart(2, '0');
+    return `${m}:${s}`;
+  }
+
+  function resetFade(el, delay) {
+    el.classList.remove('faded');
+    clearTimeout(el._fadeTimer);
+    el._fadeTimer = setTimeout(() => el.classList.add('faded'), delay);
+  }
 
   function updateNowPlaying() {
     const title = titles[currentIndex] || `Track ${currentIndex + 1}`;
-    const overlay = document.getElementById('now-playing');
-
-    // For single-track sessions, the track title and session name are
-    // usually near-identical - showing both stacks into a redundant
-    // two-line mess. Only show the "(x/y)" counter when there's actually
-    // more than one track to distinguish between.
     if (ids.length === 1) {
-      overlay.textContent = sessionName;
+      nowPlayingEl.textContent = sessionName;
     } else {
-      overlay.textContent = `${sessionName} — ${title} (${currentIndex + 1}/${ids.length})`;
+      nowPlayingEl.textContent = `${sessionName} — ${title} (${currentIndex + 1}/${ids.length})`;
     }
-
-    // Show it fresh every time a track changes, then auto-fade after 8s
-    // so it doesn't sit on screen the whole session.
-    overlay.classList.remove('faded');
-    clearTimeout(fadeTimer);
-    fadeTimer = setTimeout(() => {
-      overlay.classList.add('faded');
-    }, 8000);
+    resetFade(nowPlayingEl, 8000);
+    resetFade(controlsEl, 6000);
   }
 
-  function onYouTubeIframeAPIReady() {
+  async function fetchSavedProgress() {
+    try {
+      const res = await fetch(`/.netlify/functions/progress?id=${encodeURIComponent(progressId)}`);
+      const data = await res.json();
+      return data.progress;
+    } catch {
+      return null;
+    }
+  }
+
+  function saveProgress() {
+    if (!player || typeof player.getCurrentTime !== 'function') return;
+    const position = player.getCurrentTime();
+    fetch('/.netlify/functions/progress', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: progressId, position, trackIndex: currentIndex })
+    }).catch(() => {});
+  }
+
+  async function onYouTubeIframeAPIReady() {
     if (ids.length === 0) {
-      document.getElementById('now-playing').textContent = 'No videos specified.';
+      nowPlayingEl.textContent = 'No videos specified.';
       return;
     }
+
+    const saved = await fetchSavedProgress();
+    let startIndex = 0;
+    let startSeconds = 0;
+
+    if (saved && typeof saved.trackIndex === 'number' && saved.trackIndex < ids.length) {
+      startIndex = saved.trackIndex;
+      startSeconds = Math.max(0, Math.floor(saved.position || 0) - 3);
+    }
+
+    currentIndex = startIndex;
 
     player = new YT.Player('player', {
       height: '100%',
       width: '100%',
-      videoId: ids[0],
-      playerVars: { autoplay: 1, mute: 1, playsinline: 1, rel: 0, controls: 1 },
+      videoId: ids[startIndex],
+      playerVars: { autoplay: 1, mute: 1, playsinline: 1, rel: 0, controls: 0, start: startSeconds },
       events: {
         onReady: onPlayerReady,
         onStateChange: onPlayerStateChange
@@ -105,21 +173,32 @@
 
   function onPlayerReady() {
     const btn = document.getElementById('unmute-btn');
-    btn.focus(); // so a TV remote lands on it immediately, no navigation needed
+    btn.focus();
     btn.addEventListener('click', () => {
       player.unMute();
       player.playVideo();
       btn.classList.add('hidden');
 
-      // Request fullscreen on the same tap - hides the top address bar on
-      // TV Chrome builds that support it.
       const el = document.documentElement;
       if (el.requestFullscreen) {
-        el.requestFullscreen().catch(() => {}); // ignore if TV browser blocks it
+        el.requestFullscreen().catch(() => {});
       } else if (el.webkitRequestFullscreen) {
         el.webkitRequestFullscreen();
       }
     });
+
+    setInterval(() => {
+      if (!player || typeof player.getCurrentTime !== 'function') return;
+      const cur = player.getCurrentTime();
+      const dur = player.getDuration();
+      if (!seekBarDragging && dur > 0) {
+        seekBar.max = Math.floor(dur);
+        seekBar.value = Math.floor(cur);
+      }
+      timeLabel.textContent = `${formatTime(cur)} / ${formatTime(dur)}`;
+    }, 1000);
+
+    progressSaveTimer = setInterval(saveProgress, 5000);
   }
 
   function onPlayerStateChange(event) {
@@ -128,9 +207,54 @@
       if (currentIndex < ids.length) {
         player.loadVideoById(ids[currentIndex]);
         updateNowPlaying();
+      } else {
+        saveProgress();
       }
     }
+
+    if (event.data === YT.PlayerState.PLAYING) {
+      playPauseBtn.textContent = '⏸';
+    } else if (event.data === YT.PlayerState.PAUSED) {
+      playPauseBtn.textContent = '▶';
+    }
   }
+
+  playPauseBtn.addEventListener('click', () => {
+    if (!player) return;
+    const state = player.getPlayerState();
+    if (state === YT.PlayerState.PLAYING) {
+      player.pauseVideo();
+    } else {
+      player.playVideo();
+    }
+    resetFade(controlsEl, 6000);
+  });
+
+  document.getElementById('rewind-btn').addEventListener('click', () => {
+    if (!player) return;
+    player.seekTo(Math.max(0, player.getCurrentTime() - 15), true);
+    resetFade(controlsEl, 6000);
+  });
+
+  document.getElementById('forward-btn').addEventListener('click', () => {
+    if (!player) return;
+    player.seekTo(player.getCurrentTime() + 15, true);
+    resetFade(controlsEl, 6000);
+  });
+
+  seekBar.addEventListener('input', () => { seekBarDragging = true; });
+  seekBar.addEventListener('change', () => {
+    if (player) player.seekTo(Number(seekBar.value), true);
+    seekBarDragging = false;
+    resetFade(controlsEl, 6000);
+  });
+
+  document.body.addEventListener('click', () => {
+    resetFade(controlsEl, 6000);
+    resetFade(nowPlayingEl, 8000);
+  });
+
+  window.addEventListener('beforeunload', saveProgress);
 </script>
 
 </body>
