@@ -8,6 +8,7 @@
   html, body { margin: 0; padding: 0; background: #0a0512; height: 100%; overflow: hidden; }
   #player-wrap { position: fixed; inset: 0; }
   #player { width: 100%; height: 100%; }
+  #click-catcher { position: fixed; inset: 0; z-index: 5; }
 
   #now-playing {
     position: fixed; bottom: 78px; left: 14px; z-index: 10;
@@ -62,6 +63,7 @@
 <body>
 
 <div id="player-wrap"><div id="player"></div></div>
+<div id="click-catcher"></div>
 <div id="now-playing"></div>
 <button id="unmute-btn">▶ Tap to Start with Sound</button>
 
@@ -121,11 +123,10 @@
     resetFade(controlsEl, 6000);
   }
 
-  async function fetchSavedProgress() {
+  function fetchSavedProgress() {
     try {
-      const res = await fetch(`/.netlify/functions/progress?id=${encodeURIComponent(progressId)}`);
-      const data = await res.json();
-      return data.progress;
+      const raw = localStorage.getItem(progressId);
+      return raw ? JSON.parse(raw) : null;
     } catch {
       return null;
     }
@@ -134,20 +135,22 @@
   function saveProgress() {
     if (!player || typeof player.getCurrentTime !== 'function') return;
     const position = player.getCurrentTime();
-    fetch('/.netlify/functions/progress', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id: progressId, position, trackIndex: currentIndex })
-    }).catch(() => {});
+    try {
+      localStorage.setItem(progressId, JSON.stringify({
+        position,
+        trackIndex: currentIndex,
+        updatedAt: new Date().toISOString()
+      }));
+    } catch {}
   }
 
-  async function onYouTubeIframeAPIReady() {
+  function onYouTubeIframeAPIReady() {
     if (ids.length === 0) {
       nowPlayingEl.textContent = 'No videos specified.';
       return;
     }
 
-    const saved = await fetchSavedProgress();
+    const saved = fetchSavedProgress();
     let startIndex = 0;
     let startSeconds = 0;
 
@@ -199,6 +202,26 @@
     }, 1000);
 
     progressSaveTimer = setInterval(saveProgress, 5000);
+
+    setupMediaSession();
+  }
+
+  function setupMediaSession() {
+    if (!('mediaSession' in navigator)) return;
+
+    navigator.mediaSession.metadata = new MediaMetadata({
+      title: sessionName,
+      artist: 'KornDog Concert Corner'
+    });
+
+    navigator.mediaSession.setActionHandler('play', () => player.playVideo());
+    navigator.mediaSession.setActionHandler('pause', () => player.pauseVideo());
+    navigator.mediaSession.setActionHandler('seekbackward', () => {
+      player.seekTo(Math.max(0, player.getCurrentTime() - 15), true);
+    });
+    navigator.mediaSession.setActionHandler('seekforward', () => {
+      player.seekTo(player.getCurrentTime() + 15, true);
+    });
   }
 
   function onPlayerStateChange(event) {
@@ -249,7 +272,7 @@
     resetFade(controlsEl, 6000);
   });
 
-  document.body.addEventListener('click', () => {
+  document.getElementById('click-catcher').addEventListener('click', () => {
     resetFade(controlsEl, 6000);
     resetFade(nowPlayingEl, 8000);
   });
