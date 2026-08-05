@@ -27,25 +27,32 @@ function getGroup(channel = {}) {
     .join(' ')
     .toLowerCase();
 
-  if (/concert|music|festival|live music/.test(text)) {
-    return 'Concert Corner';
+  const rules = [
+    { group: 'Motorsports', pattern: /motor|racing|nascar|nhra|formula|monster jam|moto|turbo|aci sport/ },
+    { group: 'Combat Sports', pattern: /wrestling|ufc|mma|boxing|fight|combat|fite/ },
+    { group: 'Golf', pattern: /golf/ },
+    { group: 'Tennis', pattern: /tennis|supertennis/ },
+    { group: 'Billiards', pattern: /billiard|snooker|kozoom|pool/ },
+    { group: 'Poker & Gaming', pattern: /poker|world poker tour/ },
+    { group: 'Outdoor Sports', pattern: /sportsman|hunting|fishing|nautical|slopes|outdoor/ },
+    { group: 'Strength Sports', pattern: /strongman|powerlifting|weightlifting/ },
+    { group: 'Sports News & Talk', pattern: /sportsgrid|jim rome|draftkings|fanduel|espnews|talksport/ },
+    { group: 'Baseball', pattern: /baseball|mlb/ },
+    { group: 'Basketball', pattern: /basketball|nba|wnba/ },
+    { group: 'Hockey', pattern: /hockey|nhl/ },
+    { group: 'Soccer', pattern: /soccer|fifa|real madrid|goltv|futv|fútbol|futbol|premier league|la liga|serie a/ },
+    { group: 'Football', pattern: /football|nfl|acc network|accdn|espnu/ },
+    { group: 'College Sports', pattern: /college|ncaa|lacrosse/ },
+    { group: 'Extreme Sports', pattern: /extreme sports|fuel tv|fast&funbox|in trouble/ }
+  ];
+
+  for (const rule of rules) {
+    if (rule.pattern.test(text)) {
+      return rule.group;
+    }
   }
 
-  if (/motor|racing|nascar|nhra|formula|monster jam|moto/.test(text)) {
-    return 'Motorsports';
-  }
-
-  if (/wrestling|ufc|mma|boxing|fight|combat/.test(text)) {
-    return 'Combat Sports';
-  }
-
-  if (/football|nfl/.test(text)) return 'Football';
-  if (/basketball|nba/.test(text)) return 'Basketball';
-  if (/baseball|mlb/.test(text)) return 'Baseball';
-  if (/soccer|football club|fifa/.test(text)) return 'Soccer';
-  if (/hockey|nhl/.test(text)) return 'Hockey';
-
-  return 'Sports';
+  return 'General Sports';
 }
 
 function getStreamUrl(channel, origin) {
