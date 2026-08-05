@@ -53,3 +53,8 @@
   from = "/playlist.m3u"
   to = "/.netlify/functions/playlist"
   status = 200
+
+[[redirects]]
+  from = "/concerts.m3u"
+  to = "/.netlify/functions/concert-playlist"
+  status = 200
