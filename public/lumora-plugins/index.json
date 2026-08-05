@@ -1,0 +1,14 @@
+{
+  "name": "KornDog Lumora Plugins",
+  "scripts": [
+    {
+      "id": "korndog.stremio.publicdomain",
+      "label": "KornDog Public Domain Movies",
+      "description": "Searches Stremio's official Public Domain Movies addon and returns playable streams.",
+      "capabilities": [
+        "stream_search"
+      ],
+      "file": "public-domain-stremio.js"
+    }
+  ]
+}
