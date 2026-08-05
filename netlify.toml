@@ -48,3 +48,8 @@
   from = "/plex-hls/:id/variant/:variant.m3u8"
   to = "/.netlify/functions/plex-hls?id=:id&variant=:variant"
   status = 200
+
+[[redirects]]
+  from = "/playlist.m3u"
+  to = "/.netlify/functions/playlist"
+  status = 200
