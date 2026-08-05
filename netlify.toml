@@ -63,3 +63,8 @@
   from = "/epg.xml"
   to = "/.netlify/functions/epg"
   status = 200
+
+[[redirects]]
+  from = "/lumora-plugins/*"
+  to = "/public/lumora-plugins/:splat"
+  status = 200
