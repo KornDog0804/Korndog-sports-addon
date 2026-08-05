@@ -58,3 +58,8 @@
   from = "/concerts.m3u"
   to = "/.netlify/functions/concert-playlist"
   status = 200
+
+[[redirects]]
+  from = "/epg.xml"
+  to = "/.netlify/functions/epg"
+  status = 200
