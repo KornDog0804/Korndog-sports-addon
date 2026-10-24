@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KornDog Sports — Team Radio</title>
+<style>
+  :root{--lime:#9cff18;--lime-hot:#c4ff42;--lime-dark:#579900;--purple:#11071d;--purple-2:#190b2a;--red:#ff364e;--text:#e9e0f4;--muted:#998ba9}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%;background:var(--purple);overflow:hidden}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;display:flex;flex-direction:column}
+
+  #bar{
+    flex:0 0 auto;display:flex;align-items:center;gap:10px;
+    padding:12px 14px;background:linear-gradient(180deg,rgba(25,11,42,.96),rgba(17,7,29,.96));
+    border-bottom:1px solid rgba(156,255,24,.18);
+  }
+  #mark{
+    width:30px;height:30px;border-radius:8px;flex:0 0 auto;
+    background:linear-gradient(145deg,var(--lime-hot),var(--lime-dark));
+    display:grid;place-items:center;color:#12061f;font-weight:800;font-size:13px;
+  }
+  #bar-text{min-width:0;flex:1 1 auto}
+  #bar-title{color:#fff;font-size:14px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #bar-sub{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:10px;letter-spacing:.4px;text-transform:uppercase}
+  #bar-sub .dot{width:6px;height:6px;border-radius:50%;background:var(--red);box-shadow:0 0 6px var(--red);animation:pulse 1.6s infinite}
+  @keyframes pulse{50%{opacity:.35;transform:scale(.75)}}
+  #open-link{
+    flex:0 0 auto;display:flex;align-items:center;gap:6px;text-decoration:none;
+    color:#12061f;background:var(--lime);border-radius:8px;padding:8px 12px;
+    font-size:11px;font-weight:700;white-space:nowrap;
+  }
+
+  #frame-wrap{flex:1 1 auto;position:relative;background:#000}
+  iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  #fallback{
+    position:absolute;inset:0;display:none;flex-direction:column;align-items:center;
+    justify-content:center;gap:16px;text-align:center;padding:24px;
+    background:radial-gradient(circle at 50% 20%,rgba(123,44,180,.28),transparent 45%),var(--purple);
+  }
+  #fallback.show{display:flex}
+  #fallback h2{color:#fff;font-size:19px;font-weight:700}
+  #fallback p{color:var(--muted);font-size:13px;max-width:320px;line-height:1.5}
+  #fallback a{
+    text-decoration:none;color:#12061f;background:linear-gradient(135deg,var(--lime-hot),var(--lime-dark));
+    border-radius:9px;padding:12px 22px;font-weight:700;font-size:13px;
+  }
+</style>
+</head>
+<body>
+
+<div id="bar">
+  <div id="mark">KD</div>
+  <div id="bar-text">
+    <div id="bar-title">KornDog Sports</div>
+    <div id="bar-sub"><span class="dot"></span><span id="bar-sub-text">Live Audio</span></div>
+  </div>
+  <a id="open-link" href="#" target="_blank" rel="noopener">Open ↗</a>
+</div>
+
+<div id="frame-wrap">
+  <iframe id="player-frame" allow="autoplay" title="Live team radio"></iframe>
+  <div id="fallback">
+    <h2 id="fallback-title">Can't embed this stream</h2>
+    <p>This station's page won't load inside KornDog Sports. Open it directly instead — it'll keep playing in its own tab.</p>
+    <a id="fallback-link" href="#" target="_blank" rel="noopener">Open Live Audio</a>
+  </div>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const sourceUrl = params.get('url') || '';
+  const title = decodeURIComponent(params.get('title') || 'Team Radio');
+  const team = decodeURIComponent(params.get('team') || '');
+
+  document.title = `KornDog Sports — ${title}`;
+  document.getElementById('bar-title').textContent = title;
+  document.getElementById('bar-sub-text').textContent = team ? `${team} · Live` : 'Live';
+
+  const openLink = document.getElementById('open-link');
+  const fallbackLink = document.getElementById('fallback-link');
+  const fallback = document.getElementById('fallback');
+  const frame = document.getElementById('player-frame');
+
+  if (sourceUrl) {
+    openLink.href = sourceUrl;
+    fallbackLink.href = sourceUrl;
+    frame.src = sourceUrl;
+  } else {
+    document.getElementById('fallback-title').textContent = 'No station specified';
+    fallback.classList.add('show');
+  }
+
+  // Cross-origin iframes can't tell us whether the embed actually rendered
+  // (X-Frame-Options/CSP block silently), so this is a best-effort nudge,
+  // not a guarantee — the "Open ↗" button in the bar is the reliable
+  // escape hatch either way.
+  let settled = false;
+  frame.addEventListener('load', () => { settled = true; });
+  setTimeout(() => {
+    if (!settled && sourceUrl) {
+      fallback.classList.add('show');
+    }
+  }, 6000);
+</script>
+
+</body>
+</html>

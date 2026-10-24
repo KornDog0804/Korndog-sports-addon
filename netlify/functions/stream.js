@@ -2,6 +2,7 @@
 
 const { getMergedSportsChannels } = require('../../lib/sources');
 const { getConcertItems } = require('../../lib/providers/concerts');
+const { findTeamRadioSource } = require('../../lib/providers/team-radio');
 
 function decode(value) {
   try {
@@ -59,6 +60,31 @@ exports.handler = async (event) => {
   }
 
   try {
+    if (id.startsWith('radio-')) {
+      const source = findTeamRadioSource(id);
+
+      if (!source) {
+        return { statusCode: 200, headers, body: JSON.stringify({ streams: [] }) };
+      }
+
+      // Routed through radio.html so playback always stays inside the
+      // KornDog-branded chrome, same as Concert Corner's watch.html, rather
+      // than handing off straight to the station's bare page.
+      const radioUrl =
+        `${process.env.URL}/radio.html?url=${encodeURIComponent(source.sourceUrl)}` +
+        `&title=${encodeURIComponent(source.name)}&team=${encodeURIComponent(source.team)}`;
+
+      const streams = [
+        {
+          name: 'KornDog Team Radio',
+          title: `${source.name} (Live)`,
+          externalUrl: radioUrl
+        }
+      ];
+
+      return { statusCode: 200, headers, body: JSON.stringify({ streams }) };
+    }
+
     if (id.startsWith('concert-')) {
       const items = await getConcertItems();
       const item = items.find(it => it.id === id);

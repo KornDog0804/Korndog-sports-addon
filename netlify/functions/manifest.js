@@ -2,7 +2,7 @@ const { CATALOGS } = require('../../lib/catalogs');
 
 const MANIFEST = {
   id: 'org.korndog.sports',
-  version: '0.5.3',
+  version: '0.5.4',
   name: 'KornDog Sports',
   description:
     'Verified live sports, combat, motorsports, hunting, fishing and outdoor channels, plus Concert Corner unplugged sessions and live sets.',
@@ -14,7 +14,7 @@ const MANIFEST = {
     id: catalog.id,
     name: catalog.name
   })),
-  idPrefixes: ['pluto-', 'iptvorg-', 'plex-', 'concert-']
+  idPrefixes: ['pluto-', 'iptvorg-', 'plex-', 'concert-', 'radio-']
 };
 
 exports.handler = async () => ({

@@ -1,5 +1,6 @@
 const { getMergedSportsChannels } = require('../../lib/sources');
 const { getConcertItems } = require('../../lib/providers/concerts');
+const { getTeamRadioSources } = require('../../lib/providers/team-radio');
 const { CATALOGS, FEATURED_NAMES } = require('../../lib/catalogs');
 
 function decode(value) {
@@ -59,6 +60,28 @@ exports.handler = async event => {
   }
 
   try {
+    if (catalog.category === 'Team Radio') {
+      const sources = getTeamRadioSources();
+
+      const metas = sources.map(source => ({
+        id: source.id,
+        type: 'tv',
+        name: source.name,
+        poster: source.logo || undefined,
+        posterShape: 'square',
+        description: source.description || 'Live team radio broadcast',
+        genres: [catalog.name]
+      }));
+
+      console.log('[catalog]', { id, category: catalog.category, returned: metas.length });
+
+      return {
+        statusCode: 200,
+        headers,
+        body: JSON.stringify({ metas })
+      };
+    }
+
     if (catalog.category === 'Concerts') {
       const items = await getConcertItems();
 
