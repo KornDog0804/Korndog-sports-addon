@@ -1,11 +1,44 @@
 
 const { getMergedSportsChannels } = require('../../lib/sources');
-const { getPlexToken } = require('../../lib/providers/plex');
+const { getPlexTokenCandidates } = require('../../lib/providers/plex');
 
 const PLEX_HOSTS = new Set([
   'epg.provider.plex.tv',
   'epg-ipv4.provider.plex.tv'
 ]);
+
+// Fetch a Plex URL, trying each token (env first, anonymous second) until one works.
+async function plexFetch(url, tokens) {
+  let last = null;
+
+  for (const entry of tokens.length ? tokens : [{ token: '' }]) {
+    // streamUrl may already carry a token in its query; swap in this attempt's.
+    const attemptUrl = new URL(url);
+
+    if (entry.token) {
+      attemptUrl.searchParams.set('X-Plex-Token', entry.token);
+    }
+
+    const res = await fetch(attemptUrl.toString(), {
+      headers: {
+        'X-Plex-Token': entry.token,
+        'X-Plex-Client-Identifier':
+          process.env.PLEX_CLIENT_ID || 'korndog-sports-provider',
+        'User-Agent': 'KornDog Sports/0.6.0'
+      },
+      redirect: 'follow'
+    });
+
+    if (res.ok) return res;
+
+    last = res;
+
+    // Only a rejected token is worth retrying with another one.
+    if (res.status !== 401 && res.status !== 403) break;
+  }
+
+  return last;
+}
 
 function response(statusCode, body, contentType = 'text/plain') {
   return {
@@ -136,17 +169,9 @@ exports.handler = async event => {
       return response(404, 'Plex channel not found');
     }
 
-    const plexToken = (await getPlexToken()) || '';
+    const tokens = await getPlexTokenCandidates();
 
-    const masterResponse = await fetch(channel.streamUrl, {
-      headers: {
-        'X-Plex-Token': plexToken,
-        'X-Plex-Client-Identifier':
-          process.env.PLEX_CLIENT_ID || 'korndog-sports-provider',
-        'User-Agent': 'KornDog Sports/0.5.3'
-      },
-      redirect: 'follow'
-    });
+    const masterResponse = await plexFetch(channel.streamUrl, tokens);
 
     if (!masterResponse.ok) {
       return response(
@@ -176,15 +201,7 @@ exports.handler = async event => {
       return response(404, 'Variant not found');
     }
 
-    const variantResponse = await fetch(variantUrl, {
-      headers: {
-        'X-Plex-Token': plexToken,
-        'X-Plex-Client-Identifier':
-          process.env.PLEX_CLIENT_ID || 'korndog-sports-provider',
-        'User-Agent': 'KornDog Sports/0.5.3'
-      },
-      redirect: 'follow'
-    });
+    const variantResponse = await plexFetch(variantUrl, tokens);
 
     if (!variantResponse.ok) {
       return response(

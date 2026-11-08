@@ -51,18 +51,36 @@ exports.handler = async () => {
     const programmeXml = channels
       .filter(channel => channel.id && channel.name)
       .map(channel => {
-        const title = `${channel.name} Live`;
         const desc =
           channel.description ||
           `Live programming from ${channel.name} on KornDog Sports.`;
 
-        return [
-          `<programme start="${xmltvTime(now)}" stop="${xmltvTime(end)}" channel="${esc(channel.id)}">`,
+        const toXml = (start, stop, title) => [
+          `<programme start="${xmltvTime(start)}" stop="${xmltvTime(stop)}" channel="${esc(channel.id)}">`,
           `  <title>${esc(title)}</title>`,
           `  <desc>${esc(desc)}</desc>`,
           `  <category>Sports</category>`,
           `</programme>`
         ].join('\n');
+
+        // Real schedule (Plex channels): [startEpochSeconds, title] pairs.
+        const real = (channel.programs || [])
+          .map(item => ({ start: Number(item[0]) * 1000, title: String(item[1] || '') }))
+          .filter(item => item.start && item.title)
+          .sort((a, b) => a.start - b.start);
+
+        if (real.length) {
+          return real
+            .map((item, index) => {
+              const next = real[index + 1];
+              const stopMs = next ? next.start : item.start + 30 * 60 * 1000;
+
+              return toXml(new Date(item.start), new Date(stopMs), item.title);
+            })
+            .join('\n');
+        }
+
+        return toXml(now, end, `${channel.name} Live`);
       })
       .join('\n');
 

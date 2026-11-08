@@ -146,21 +146,33 @@ exports.handler = async (event) => {
       };
     }
 
+    const nameKey = value =>
+      String(value || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
+
+    const urlFor = item =>
+      item.source === 'plex'
+        ? `${siteOrigin(event)}/plex-hls/${encodeURIComponent(item.id)}/master.m3u8`
+        : item.streamUrl;
+
+    // Primary first, then any same-named channel from another source as a backup.
+    const backups = channels.filter(
+      item =>
+        item.id !== channel.id &&
+        item.streamUrl &&
+        nameKey(item.name) === nameKey(channel.name)
+    );
+
+    const streams = [channel, ...backups].map((item, index) => ({
+      name: 'KornDog Sports',
+      title:
+        `${item.name} (${item.source})` + (index ? ' · backup' : ''),
+      url: urlFor(item)
+    }));
+
     return {
       statusCode: 200,
       headers,
-      body: JSON.stringify({
-        streams: [
-          {
-            name: 'KornDog Sports',
-            title: `${channel.name} (${channel.source})`,
-            url:
-              channel.source === 'plex'
-                ? `${siteOrigin(event)}/plex-hls/${encodeURIComponent(channel.id)}/master.m3u8`
-                : channel.streamUrl
-          }
-        ]
-      })
+      body: JSON.stringify({ streams })
     };
   } catch (error) {
     console.error('[stream] failed:', error);
