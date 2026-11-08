@@ -159,9 +159,8 @@ exports.handler = async event => {
     const masterText = await masterResponse.text();
 
     if (variant === null) {
-      const origin =
-        process.env.URL ||
-        `https://${event.headers.host}`;
+      const host = event.headers['x-forwarded-host'] || event.headers.host;
+      const origin = host ? `https://${host}` : process.env.URL;
 
       return response(
         200,
