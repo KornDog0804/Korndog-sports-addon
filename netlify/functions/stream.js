@@ -36,6 +36,13 @@ function extractYoutubeId(url) {
   return longMatch ? longMatch[1] : null;
 }
 
+// Use the host the request actually came in on (so deploy previews point at
+// themselves), falling back to the site's main URL.
+function siteOrigin(event) {
+  const host = event && event.headers && (event.headers['x-forwarded-host'] || event.headers.host);
+  return host ? `https://${host}` : (process.env.URL || '');
+}
+
 exports.handler = async (event) => {
   const { type, id } = parseRequest(event);
 
@@ -71,7 +78,7 @@ exports.handler = async (event) => {
       // KornDog-branded chrome, same as Concert Corner's watch.html, rather
       // than handing off straight to the station's bare page.
       const radioUrl =
-        `${process.env.URL}/radio.html?url=${encodeURIComponent(source.sourceUrl)}` +
+        `${siteOrigin(event)}/radio.html?url=${encodeURIComponent(source.sourceUrl)}` +
         `&title=${encodeURIComponent(source.name)}&team=${encodeURIComponent(source.team)}`;
 
       const streams = [
@@ -106,7 +113,7 @@ exports.handler = async (event) => {
       const titlesParam = item.tracks.map(t => encodeURIComponent(t.title)).join(',');
       const sessionParam = encodeURIComponent(item.name);
 
-      const watchUrl = `${process.env.URL}/watch.html?ids=${idsParam}&titles=${titlesParam}&session=${sessionParam}`;
+      const watchUrl = `${siteOrigin(event)}/watch.html?ids=${idsParam}&titles=${titlesParam}&session=${sessionParam}`;
 
       const streams = [
         {
@@ -149,7 +156,7 @@ exports.handler = async (event) => {
             title: `${channel.name} (${channel.source})`,
             url:
               channel.source === 'plex'
-                ? `${process.env.URL}/plex-hls/${encodeURIComponent(channel.id)}/master.m3u8`
+                ? `${siteOrigin(event)}/plex-hls/${encodeURIComponent(channel.id)}/master.m3u8`
                 : channel.streamUrl
           }
         ]

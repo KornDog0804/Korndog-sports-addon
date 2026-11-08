@@ -1,5 +1,6 @@
 
 const { getMergedSportsChannels } = require('../../lib/sources');
+const { getPlexToken } = require('../../lib/providers/plex');
 
 const PLEX_HOSTS = new Set([
   'epg.provider.plex.tv',
@@ -135,9 +136,11 @@ exports.handler = async event => {
       return response(404, 'Plex channel not found');
     }
 
+    const plexToken = (await getPlexToken()) || '';
+
     const masterResponse = await fetch(channel.streamUrl, {
       headers: {
-        'X-Plex-Token': process.env.PLEX_TOKEN || '',
+        'X-Plex-Token': plexToken,
         'X-Plex-Client-Identifier':
           process.env.PLEX_CLIENT_ID || 'korndog-sports-provider',
         'User-Agent': 'KornDog Sports/0.5.3'
@@ -156,9 +159,8 @@ exports.handler = async event => {
     const masterText = await masterResponse.text();
 
     if (variant === null) {
-      const origin =
-        process.env.URL ||
-        `https://${event.headers.host}`;
+      const host = event.headers['x-forwarded-host'] || event.headers.host;
+      const origin = host ? `https://${host}` : process.env.URL;
 
       return response(
         200,
@@ -176,7 +178,7 @@ exports.handler = async event => {
 
     const variantResponse = await fetch(variantUrl, {
       headers: {
-        'X-Plex-Token': process.env.PLEX_TOKEN || '',
+        'X-Plex-Token': plexToken,
         'X-Plex-Client-Identifier':
           process.env.PLEX_CLIENT_ID || 'korndog-sports-provider',
         'User-Agent': 'KornDog Sports/0.5.3'

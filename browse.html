@@ -208,10 +208,7 @@
 
     if (currentHls) { currentHls.destroy(); currentHls = null; }
 
-    if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = stream.url;
-      video.play().catch(() => {});
-    } else if (window.Hls && Hls.isSupported()) {
+    if (window.Hls && Hls.isSupported()) {
       currentHls = new Hls({
         manifestLoadingTimeOut: 15000,
         manifestLoadingMaxRetry: 4,
@@ -242,6 +239,10 @@
 
       currentHls.loadSource(stream.url);
       currentHls.attachMedia(video);
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      // Safari/iOS: native HLS
+      video.src = stream.url;
+      video.play().catch(() => {});
     }
 
     if (video.requestFullscreen) {
